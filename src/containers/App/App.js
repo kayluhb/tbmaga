@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 
 import './App.scss';
 import config from '../../config';
-import { Header, Footer, Menu, Places } from '../../components';
+import { Header, Footer, Menu, Legend, Mapp, Nav } from '../../components';
 import { PLACES } from '../../redux/modules/map';
 
 /* eslint-disable react/prefer-stateless-function */
@@ -40,7 +40,9 @@ export default class App extends Component {
         <Header />
         <Menu />
         <div className="wrap">
-          <Places />
+          <Nav />
+          <Legend />
+          <Mapp key="map" />
           <ReactCSSTransitionGroup
             component="div"
             transitionName="page"
