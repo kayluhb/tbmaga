@@ -1,0 +1,38 @@
+.header {
+  color: $col-white;
+  left: 30px;
+  min-width: $body-width-min;
+  position: fixed;
+  top: 20px;
+  z-index: $z-header;
+
+  &:hover {
+    color: $col-blue-dark;
+  }
+
+  &__title,
+  &__subtitle {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__title {
+    font: normal 36px / 36px $font-medium;
+  }
+
+  &__subtitle {
+    font: normal 13px / 13px $font-light;
+    text-transform: uppercase;
+  }
+}
+
+.map {
+  &--collapsed,
+  &--placed {
+    .header {
+      &:hover {
+        color: $col-blue-light;
+      }
+    }
+  }
+}

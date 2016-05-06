@@ -1,0 +1,9 @@
+linters:
+
+  NestingDepth:
+    enabled: true
+    max_depth: 4
+
+  SelectorFormat:
+    enabled: true
+    convention: strict_BEM

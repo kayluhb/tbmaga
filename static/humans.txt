@@ -1,0 +1,15 @@
+# the humans responsible & colophon
+# humanstxt.org
+
+# TEAM
+  Husband: Caleb Brown
+  Site: kayluhb.com
+  Twitter: @kayluhb
+  Location: US
+
+  Wife: Lillian Brown
+  Twitter: @lillian_brown
+  Location: US
+
+# TECHNOLOGY COLOPHON
+  Standards: HTML5, CSS3, React.js, Node.js

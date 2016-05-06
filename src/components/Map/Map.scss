@@ -1,0 +1,84 @@
+@import '../../styles/app/config';
+
+.map {
+  height: 50%;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: width $transition-timing-dramatic $transition-function-dramatic;
+  width: 100%;
+  z-index: $z-map;
+
+  &__back {
+    background: rgba($col-blue-dark, .8);
+    bottom: -22%;
+    display: block;
+    height: 21%;
+    left: 0;
+    padding-top: 30px;
+    position: absolute;
+    text-align: center;
+    transition: all $transition-timing-dramatic .3s $transition-function-dramatic;
+    width: 100%;
+
+    &__icon {
+      height: 30px;
+      width: 30px;
+
+      path {
+        fill: $col-white;
+        transition: all $transition-timing $transition-function;
+      }
+    }
+
+    &:hover {
+      background: rgba($col-blue-dark, .5);
+      padding-top: 10px;
+      transition: all $transition-timing $transition-function;
+    }
+  }
+
+  &__map {
+    height: 100%;
+    width: 100%;
+  }
+
+  &--collapsed {
+    .map {
+      &__back {
+        bottom: -1%;
+      }
+    }
+  }
+
+  &--placed {
+    .map {
+      width: calc(100% - #{$place-width});
+    }
+  }
+}
+
+@media (max-width: $place-width * 2) {
+  .map {
+
+    &--placed {
+      .map {
+        width: calc(100% - #{$body-width-min});
+      }
+    }
+  }
+}
+
+
+@media (max-width: $break-small) {
+  .map {
+    &__back {
+      padding-top: 90px;
+
+      &:hover {
+        padding-top: 80px;
+      }
+    }
+  }
+}

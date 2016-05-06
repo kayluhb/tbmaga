@@ -1,0 +1,72 @@
+// scss-lint:disable QualifyingElement, VendorPrefix
+form {
+  margin: 0;
+}
+
+// *
+// * Define consistent border, margin, and padding.
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+// Indicate that 'label' will shift focus to the associated form element
+label {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button,
+select,
+input[type="button"],
+input[type="file"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+}
+
+// reset weird iOS styles
+input[type="text"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
+  background: $col-white;
+  border: 1px solid $col-input-border;
+  border-radius: 0;
+  height: 34px;
+  line-height: 34px;
+  padding: 0 8px;
+  transition: border-color $transition-timing $transition-function;
+
+  &:focus {
+    border-color: $col-hover;
+    outline: none;
+  }
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+  vertical-align: top;
+}
+
+// Placeholder styles
+::-webkit-input-placeholder {
+  color: $col-placeholder;
+}
+
+::-moz-placeholder {
+  color: $col-placeholder;
+}
+
+:-ms-input-placeholder {
+  color: $col-placeholder;
+}

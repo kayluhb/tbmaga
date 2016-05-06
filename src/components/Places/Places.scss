@@ -1,0 +1,72 @@
+@import '../../styles/app/config';
+
+.nav {
+  bottom: 30px;
+  left: 30px;
+  position: fixed;
+  transition: all $transition-timing-dramatic .3s $transition-function-dramatic;
+  z-index: $z-nav;
+
+  &__next,
+  &__prev {
+    border: 2px solid $col-white;
+    bottom: 0;
+    display: block;
+    font-family: $font-medium;
+    height: 40px;
+    left: 0;
+    line-height: 34px;
+    position: absolute;
+    text-align: center;
+    transition: all $transition-timing $transition-function;
+    width: 40px;
+    z-index: 2;
+
+    svg {
+      height: 24px;
+      width: 24px;
+    }
+
+    path {
+      fill: $col-white;
+    }
+
+    &:hover {
+      background: $col-blue-dark;
+    }
+
+    &:active {
+      background: transparent;
+    }
+  }
+
+  &__next {
+    left: 60px;
+  }
+}
+
+.map {
+  &--collapsed {
+    .nav {
+      bottom: -50px;
+      transition-delay: 0s;
+    }
+  }
+
+  &--placed {
+    .nav {
+      left: 30px + $place-width;
+      transition-delay: 0s;
+    }
+  }
+}
+
+@media (max-width: $place-width * 2) {
+  .map {
+    &--placed {
+      .nav {
+        left: 350px;
+      }
+    }
+  }
+}

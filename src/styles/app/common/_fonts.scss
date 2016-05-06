@@ -1,0 +1,16 @@
+$fonts: jubilat-medium freightsans-black freightsans-bold freightsans-book freightsans-light freightsans-medium;
+
+@each $font in $fonts {
+  @include font-face($font);
+}
+
+@font-face {
+  font-family: jubilat-light;
+  src: url('/fonts/jubilat-light.eot');
+  src: url('/fonts/jubilat-light.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/jubilat-light.woff') format('woff'),
+       url('/fonts/jubilat-light.ttf') format('truetype'),
+       url('/fonts/jubilat-light.svg#jubilat_light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,42 @@
+.footer {
+  bottom: 30px;
+  color: $col-white;
+  font-size: 13px;
+  position: absolute;
+  right: 20px;
+  z-index: $z-footer;
+
+  &__social {
+    display: inline-block;
+    height: 20px;
+    margin: 0 5px;
+    width: 20px;
+
+    path {
+      fill: $col-white;
+      transition: all .3s cubic-bezier(.25, .25, .75, .75);
+    }
+
+    &:hover {
+      path {
+        fill: $col-blue-dark;
+      }
+    }
+  }
+
+  &__copy {
+    margin-left: 10px;
+  }
+}
+
+.map--collapsed {
+  .footer {
+    &__social {
+      &:hover {
+        path {
+          fill: $col-blue-light;
+        }
+      }
+    }
+  }
+}

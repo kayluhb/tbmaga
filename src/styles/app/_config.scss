@@ -1,0 +1,57 @@
+//
+// Colors
+// Color variables follow the pattern $col-<name>-<variation>
+$col-black: #1f1f1f;
+$col-blue: #0c61cc;
+$col-blue-dark: #072d54;
+$col-blue-light: lighten($col-blue, 20%);
+$col-purple: #7916c5;
+$col-red: #ec3e3e;
+$col-yellow: #ffab0f;
+$col-white: #fff;
+
+$col-background: $col-blue-dark;
+$col-blockquote: #76888a;
+$col-default: $col-black;
+$col-highlight: $col-purple;
+$col-hover: $col-blue;
+$col-hr: #e2e6e6;
+$col-input-border: #3f5f73;
+$col-link: $col-default;
+$col-placeholder: #e9e9e9;
+
+//
+// Breakpoints
+$break-laptop: 1068px;
+$break-phone: 600px;
+$break-tablet: 768px;
+$break-small: 580px;
+
+//
+// Dimensions
+$body-width-max: 1040px;
+$body-width-min: 320px;
+$place-width: 480px;
+
+// Fonts
+//
+// Font variables follow the pattern $font-<weight>
+$font-default: 'freightsans-book', sans-serif;
+$font-light: 'jubilat-light', serif;
+$font-medium: 'jubilat-medium', serif;
+
+//
+// Zs
+$z-footer: 5;
+$z-header: 6;
+$z-map: 1;
+$z-menu: 4;
+$z-nav: 3;
+$z-place: 2;
+
+//
+// Transitions
+$transition-function-dramatic: cubic-bezier(.645, .045, .355, 1);
+$transition-function: ease-in-out;
+$transition-timing: .3s;
+$transition-timing-dramatic: .6s;

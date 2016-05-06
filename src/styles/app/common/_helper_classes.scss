@@ -1,0 +1,20 @@
+// scss-lint:disable VendorPrefix
+.flip-h {
+  -ms-filter: 'FlipH';
+  filter: FlipH;
+  transform: scaleX(-1);
+}
+
+.flip-v {
+  -ms-filter: 'FlipV';
+  filter: FlipV;
+  transform: scaleY(-1);
+}
+
+.hide {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}

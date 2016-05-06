@@ -1,0 +1,6 @@
+a,
+button,
+.button {
+  transition: color $transition-timing $transition-function;
+  transition-property: background-color, border-color, color, opacity;
+}

@@ -1,0 +1,55 @@
+@import '../../styles/app/config';
+
+.legend {
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: all $transition-timing-dramatic $transition-function-dramatic;
+  width: 100%;
+  will-change: margin-left, top, width;
+  z-index: 40;
+
+  // &__miles,
+  &__total {
+    background: rgba($col-white, .7);
+    height: 6px;
+    transition: width $transition-timing $transition-function;
+  }
+
+  &__mile {
+    background: rgba($col-blue-dark, .7);
+    height: 6px;
+    left: 0;
+    margin-left: -1px;
+    position: absolute;
+    top: 0;
+    width: 2px;
+    z-index: 2;
+  }
+}
+
+.map {
+  &--collapsed {
+    .legend {
+      top: -10px;
+    }
+  }
+
+  &--placed {
+    .legend {
+      margin-left: $place-width;
+      width: calc(100% - #{$place-width});
+    }
+  }
+}
+
+@media (max-width: $place-width * 2) {
+  .map {
+    &--placed {
+      .legend {
+        margin-left: $body-width-min;
+        width: calc(100% - #{$body-width-min});
+      }
+    }
+  }
+}

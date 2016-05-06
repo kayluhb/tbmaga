@@ -1,0 +1,125 @@
+@import '../../styles/app/config';
+
+.place-wrap {
+  height: calc(50% - 100px);
+  left: -$place-width;
+  margin-top: 100px;
+  position: absolute;
+  top: 0;
+  transition: left $transition-timing-dramatic $transition-function-dramatic;
+  width: $place-width;
+  z-index: $z-place;
+
+  &__toggle {
+    border: 2px solid $col-white;
+    border-left: 0;
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    overflow: hidden;
+    position: absolute;
+    right: -40px;
+    top: 0;
+    width: 40px;
+
+    &,
+    &__icon {
+      transition: all .4s $transition-function-dramatic;
+    }
+
+    &__icon {
+      fill: $col-white;
+      height: 24px;
+      left: 7px;
+      position: absolute;
+      top: 7px;
+      width: 24px;
+    }
+
+    &__close {
+      left: 49px;
+    }
+
+    &:hover {
+      border-color: $col-black;
+
+      .place-wrap__toggle__icon {
+        fill: $col-black;
+      }
+    }
+  }
+}
+
+.place {
+  background: $col-blue-dark;
+  height: 100%;
+  overflow-y: auto;
+  width: 100%;
+
+  &__header {
+    position: relative;
+
+    &__title {
+      background: rgba($col-blue, .5);
+      color: $col-white;
+      margin: 0;
+      padding: 40px 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    &__subtitle {
+      color: $col-white;
+      font-family: $font-light;
+      font-size: 12px;
+      left: 20px;
+      margin: 0;
+      position: absolute;
+      bottom: 30px;
+      z-index: 3;
+    }
+
+    &__bg {
+      background: no-repeat;
+      background-size: cover;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  &__photos {
+    left: 0;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+  }
+}
+
+.map--placed {
+  .place-wrap {
+    &--open {
+      left: 0;
+
+      .place-wrap__toggle {
+        &__info {
+          left: -47px;
+        }
+
+        &__close {
+          left: 7px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $place-width * 2) {
+  .place-wrap {
+    left: -$body-width-min;
+    width: $body-width-min;
+  }
+}

@@ -1,0 +1,44 @@
+// scss-lint:disable PropertySortOrder, VendorPrefix
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -ms-text-size-adjust: 100%;
+  overflow-y: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: $col-background;
+  margin: 0;
+}
+
+audio,
+canvas,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+::selection {
+  background: $col-highlight;
+  color: $col-white;
+  text-shadow: none;
+}
