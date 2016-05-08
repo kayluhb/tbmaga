@@ -85,10 +85,14 @@ export default class Map extends Component {
   }
 
   onLoad() {
-    this.addSources();
-    this.addLayers();
-    this.flyToCenter();
-    this.highlightCurrent();
+    try {
+      this.addSources();
+      this.addLayers();
+      this.flyToCenter();
+      this.highlightCurrent();
+    } catch (ex) {
+      console.warn(ex);
+    }
   }
 
   // Use the same approach as above to indicate that the symbols are clickable
@@ -229,7 +233,11 @@ export default class Map extends Component {
     if (this.map !== null) {
       this.flyToCenter();
       this.clearCurrent();
-      this.highlightCurrent();
+      try {
+        this.highlightCurrent();
+      } catch (ex) {
+        console.warn(ex);
+      }
     }
 
     return (
