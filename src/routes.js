@@ -8,13 +8,9 @@ import {
     Contact,
     NotFound,
     Place,
-    PlacePhotos
   } from './containers';
 
 export default function routes() {
-  /**
-   * Please keep routes in alphabetical order
-   */
   return (
     <Route component={App} path="/">
       { /* Home (main) route */ }
@@ -22,7 +18,7 @@ export default function routes() {
       <Route component={About} path="about" />
       <Route component={Contact} path="contact" />
       <Route component={Place} path="places/:slug">
-        <Route component={PlacePhotos} path="photos" />
+        <Route component={Place} path=":subdir" />
       </Route>
 
       { /* Catch all route */ }

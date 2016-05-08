@@ -1,0 +1,38 @@
+@import '../../styles/app/config';
+
+.photos {
+  background: $col-blue-dark;
+  height: 554px;
+  left: $place-width;
+  overflow-x: scroll;
+  position: fixed;
+  top: 100px;
+  width: calc(100% - #{$place-width});
+  z-index: $z-photos;
+
+  &__list {
+    margin: 0;
+    padding: 0 0 0 10px;
+    white-space: nowrap;
+    width: auto;
+  }
+
+  &__item {
+    background: none;
+    display: inline-block;
+    height: 554px;
+    padding: 10px 10px 10px 0;
+  }
+
+  &__img {
+    height: 100%;
+  }
+}
+
+@media (max-width: $place-width * 2) {
+  .photos {
+    left: $body-width-min;
+    width: calc(100% - #{$body-width-min});
+  }
+}
+

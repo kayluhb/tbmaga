@@ -1,21 +1,13 @@
 import Helmet from 'react-helmet';
-import React from 'react';
-import { connect } from 'react-redux';
+import React, { Component, PropTypes } from 'react';
 
-import Place from './Place';
-import { load, placeToggle } from '../../redux/modules/actions';
+import './Photos.scss';
 
-@connect(
-  state => ({
-    place: state.map.place,
-    open: state.place.open
-  }),
-  {
-    load,
-    placeToggle
+export default class Photos extends Component {
+  static propTypes = {
+    place: PropTypes.object.isRequired
   }
-)
-export default class Photos extends Place {
+
   imgs(place) {
     const { photos, slug, title } = place.properties;
 
@@ -24,22 +16,23 @@ export default class Photos extends Place {
     }
 
     return (
-      <ul className="block--photos__list">
+      <ul className="photos__list">
         {Array(photos).fill().map((i, idx) =>
-          <li key={idx}>
-            <img src={`/images/${slug}/${(idx + 1)}.jpg`} alt={title} />
+          <li className="photos__item" key={idx}>
+            <img className="photos__img" src={`/images/${slug}/${(idx + 1)}.jpg`} alt={title} />
           </li>
         )}
       </ul>
     );
   }
+
   render() {
     const { place } = this.props;
     const { fullTitle } = place.properties;
     const description = `Photos : Lillian and Caleb stop in ${fullTitle}`;
 
     return (
-      <div className="place__photos">
+      <div className="photos">
         <Helmet
           title={fullTitle}
           meta={[

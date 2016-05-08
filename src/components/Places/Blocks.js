@@ -2,10 +2,10 @@ import classNames from 'classnames';
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 
+import './Blocks.scss';
 import Block from './Block';
 import { Car, Day, Icon, Photo } from '../Icons';
 import { getTotalMiles } from '../../redux/modules/map';
-import './Blocks.scss';
 
 export default class Blocks extends Component {
   static propTypes = {

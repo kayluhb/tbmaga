@@ -47,7 +47,7 @@ export default class App extends Component {
             component="div"
             transitionName="page"
             transitionEnterTimeout={100}
-            transitionLeaveTimeout={600}
+            transitionLeaveTimeout={300}
           >
             {React.cloneElement(children, {
               key: location.pathname
