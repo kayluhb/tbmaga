@@ -231,7 +231,7 @@ const initialState = {
         upcoming: true,
         type,
         properties: {
-          date: 'May 24th',
+          date: 'May 25th',
           day: 10,
           fullTitle: 'Yellowstone, WY',
           id: 11,
@@ -251,13 +251,33 @@ const initialState = {
         upcoming: true,
         type,
         properties: {
-          date: 'May 25th',
+          date: 'May 27th',
           day: 11,
-          fullTitle: 'Seattle, WA',
+          fullTitle: 'Missoula, MT',
           id: 12,
-          miles: 740,
+          miles: 262,
           next: 13,
           prev: 11,
+          slug: 'missoula',
+          title: 'Missoula',
+          why: ''
+        },
+        geometry: {
+          type: geometryType,
+          coordinates: [-114.1582501, 46.8762361]
+        }
+      },
+      {
+        upcoming: true,
+        type,
+        properties: {
+          date: 'May 28th',
+          day: 11,
+          fullTitle: 'Seattle, WA',
+          id: 13,
+          miles: 475,
+          next: 14,
+          prev: 12,
           slug: 'seattle',
           title: 'Seattle',
           why: 'Lillian used to live here'
@@ -271,13 +291,13 @@ const initialState = {
         upcoming: true,
         type,
         properties: {
-          date: 'May 26th',
+          date: 'May 29th',
           day: 12,
           fullTitle: 'Portland, OR',
-          id: 13,
+          id: 14,
           miles: 174,
-          next: 14,
-          prev: 12,
+          next: 15,
+          prev: 13,
           slug: 'portland',
           title: 'Portland',
           why: 'Caleb\'s cousin lives here'
@@ -291,13 +311,13 @@ const initialState = {
         upcoming: true,
         type,
         properties: {
-          date: 'May 27th',
+          date: 'May 31th',
           day: 13,
           fullTitle: 'San Francisco, CA',
-          id: 14,
+          id: 15,
           miles: 636,
-          next: 15,
-          prev: 13,
+          next: 16,
+          prev: 14,
           slug: 'san-francisco',
           title: 'San Francisco',
           why: 'This is one of Lillian and Caleb\'s favorite cities'
@@ -311,13 +331,13 @@ const initialState = {
         upcoming: true,
         type,
         properties: {
-          date: 'May 28th',
+          date: 'June 1st',
           day: 14,
           fullTitle: 'Los Angeles, CA',
-          id: 15,
+          id: 16,
           miles: 383,
-          next: 16,
-          prev: 14,
+          next: 17,
+          prev: 15,
           slug: 'los-angeles',
           title: 'Los Angeles',
           why: 'Caleb has never been'
@@ -331,13 +351,13 @@ const initialState = {
         upcoming: true,
         type,
         properties: {
-          date: 'May 29th',
+          date: 'June 2nd',
           day: 15,
           fullTitle: 'San Diego, CA',
-          id: 16,
+          id: 17,
           miles: 124,
-          next: 17,
-          prev: 15,
+          next: 18,
+          prev: 16,
           slug: 'san-diego',
           title: 'San Diego',
           why: 'To try out the IPAs'
@@ -351,13 +371,13 @@ const initialState = {
         upcoming: true,
         type,
         properties: {
-          date: 'May 30th',
+          date: 'June 4th',
           day: 16,
           fullTitle: 'Grand Canyon, AZ',
-          id: 17,
+          id: 18,
           miles: 552,
-          next: 18,
-          prev: 16,
+          next: 19,
+          prev: 17,
           slug: 'grand-canyon',
           title: 'Grand Canyon',
           why: 'Caleb has never been'
@@ -371,13 +391,13 @@ const initialState = {
         upcoming: true,
         type,
         properties: {
-          date: 'May 31st',
+          date: 'June 6th',
           day: 17,
           fullTitle: 'Carlsbad, NM',
-          id: 18,
+          id: 19,
           miles: 708,
-          next: 19,
-          prev: 17,
+          next: 20,
+          prev: 18,
           slug: 'carlsbad',
           title: 'Carlsbad',
           why: 'Caleb loves caves'
@@ -391,13 +411,13 @@ const initialState = {
         upcoming: true,
         type,
         properties: {
-          date: 'June 1st',
+          date: 'June 7th',
           day: 18,
           fullTitle: 'Marfa, TX',
-          id: 19,
+          id: 20,
           miles: 186,
-          next: 20,
-          prev: 18,
+          next: 21,
+          prev: 19,
           slug: 'marfa',
           title: 'Marfa',
           why: 'Beyonce once went here'
@@ -408,16 +428,36 @@ const initialState = {
         }
       },
       {
+        upcoming: true,
+        type,
+        properties: {
+          date: 'June 8th',
+          day: 18,
+          fullTitle: 'Big Bend National Park, TX',
+          id: 21,
+          miles: 98,
+          next: 22,
+          prev: 20,
+          slug: 'big-bend',
+          title: 'Big Bend',
+          why: ''
+        },
+        geometry: {
+          type: geometryType,
+          coordinates: [-103.5955606, 29.3782555]
+        }
+      },
+      {
         atx: true,
         type,
         properties: {
-          date: 'June 2nd',
-          day: 19,
+          date: 'June 15th',
+          day: 30,
           fullTitle: 'Austin, TX',
-          id: 20,
-          miles: 429,
+          id: 22,
+          miles: 435,
           next: 1,
-          prev: 19,
+          prev: 21,
           slug: 'austin',
           title: 'Austin',
           why: 'Our new home'
