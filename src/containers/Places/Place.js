@@ -89,9 +89,7 @@ export default class Place extends Component {
             <div className="place__header__bg" style={{ backgroundImage: `url(/images/cities/${slug}.jpg)` }}></div>
           </header>
           {blocks}
-          <div className="place__photos">
-            {photos}
-          </div>
+          {photos}
         </main>
       </div>
     );

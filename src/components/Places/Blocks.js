@@ -64,7 +64,7 @@ export default class Blocks extends Component {
       >
         <span className="block__label">
           <Photo className="block__icon" />
-          Photos
+          Media
         </span>
         <ul className="block--photos__list">
           {Array(photos).fill().map((i, idx) =>

@@ -12,20 +12,30 @@
 
   &__list {
     margin: 0;
-    padding: 0 0 0 10px;
+    padding: 0 10px;
     white-space: nowrap;
-    width: auto;
+    width: 60000px;
   }
 
   &__item {
-    background: none;
-    display: inline-block;
-    height: 554px;
-    padding: 10px 10px 10px 0;
+    background: $col-black;
+    float: left;
+    height: 534px;
+    margin: 10px 10px 10px 0;
+    padding: 0;
+
+    &--media {
+      align-items: center;
+      display: flex;
+    }
   }
 
   &__img {
     height: 100%;
+  }
+
+  .instagram-media {
+    width: 428px !important;
   }
 }
 
@@ -35,4 +45,3 @@
     width: calc(100% - #{$body-width-min});
   }
 }
-

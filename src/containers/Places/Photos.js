@@ -8,8 +8,15 @@ export default class Photos extends Component {
     place: PropTypes.object.isRequired
   }
 
+  componentDidMount() {
+    if (typeof instgrm === 'undefined') {
+      return;
+    }
+    instgrm.Embeds.process();
+  }
+
   imgs(place) {
-    const { photos, slug, title } = place.properties;
+    const { photos, media, slug, title } = place.properties;
 
     if (photos === undefined || photos < 1) {
       return [];
@@ -17,8 +24,15 @@ export default class Photos extends Component {
 
     return (
       <ul className="photos__list">
+        {media.map((content, idx) =>
+          <li
+            className="photos__item photos__item--media"
+            dangerouslySetInnerHTML={{ __html: content }}
+            key={`media-${idx}`}
+          />
+        )}
         {Array(photos).fill().map((i, idx) =>
-          <li className="photos__item" key={idx}>
+          <li className="photos__item" key={`img-${idx}`}>
             <img className="photos__img" src={`/images/${slug}/${(idx + 1)}.jpg`} alt={title} />
           </li>
         )}

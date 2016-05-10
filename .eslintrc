@@ -37,6 +37,7 @@
     "__DISABLE_SSR__": true,
     "__DEVTOOLS__": true,
     "webpackIsomorphicTools": true,
-    "mapboxgl": true
+    "mapboxgl": true,
+    "instgrm": true
   }
 }
