@@ -11,7 +11,8 @@ import { PLACES } from '../../redux/modules/map';
 
 /* eslint-disable react/prefer-stateless-function */
 @connect(state => ({
-  open: state.place.open
+  open: state.place.open,
+  mediaOpen: state.place.mediaOpen
 }))
 export default class App extends Component {
   static contextTypes = {
@@ -21,17 +22,19 @@ export default class App extends Component {
   static propTypes = {
     children: PropTypes.object.isRequired,
     location: PropTypes.object.isRequired,
-    open: PropTypes.bool.isRequired
+    open: PropTypes.bool.isRequired,
+    mediaOpen: PropTypes.bool.isRequired
   };
 
   render() {
-    const { children, location, open } = this.props;
+    const { children, location, open, mediaOpen } = this.props;
     const { pathname } = location;
     const isPlaces = pathname.startsWith(`/${PLACES}`);
     const isHome = pathname === '/';
     const klass = classNames({
       'map--collapsed': (!isHome && !isPlaces),
-      'map--placed': (isPlaces || isHome) && open
+      'map--placed': (isPlaces || isHome) && open,
+      'map--media-open': mediaOpen
     });
 
     return (

@@ -46,6 +46,7 @@
 }
 
 .map {
+  &--media-open,
   &--collapsed {
     .nav {
       bottom: -50px;

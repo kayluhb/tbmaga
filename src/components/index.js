@@ -12,3 +12,4 @@ export Menu from './Menu/Menu';
 export Nav from './Places/Nav';
 export PlaceBlocks from './Places/Blocks';
 export PlaceUpcomingBlocks from './Places/UpcomingBlocks';
+export PlacePhotos from './Places/Photos';

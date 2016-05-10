@@ -12,7 +12,7 @@ import { syncHistoryWithStore } from 'react-router-redux';
 
 import createStore from './redux/create';
 import routes from './routes';
-import { menuClose } from './redux/modules/actions';
+import { menuClose, placeCloseMedia } from './redux/modules/actions';
 
 const browserHistory = withScroll(_browserHistory);
 const content = document.getElementById('content');
@@ -66,6 +66,10 @@ function onHistoryChange() {
   const state = store.getState();
   if (state.menu.open) {
     store.dispatch(menuClose());
+  }
+
+  if (state.place.mediaOpen) {
+    store.dispatch(placeCloseMedia());
   }
 
   if (inProduction) {

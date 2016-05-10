@@ -4,10 +4,9 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
 import './Place.scss';
-import Photos from './Photos';
-import { Icon } from '../../components/Icons';
-import { load, placeToggle } from '../../redux/modules/actions';
-import { PlaceBlocks, PlaceUpcomingBlocks } from '../../components';
+import { Close, Icon } from '../../components/Icons';
+import { load, placeToggle, placeCloseMedia } from '../../redux/modules/actions';
+import { PlaceBlocks, PlaceUpcomingBlocks, PlacePhotos } from '../../components';
 
 /* eslint-disable max-len */
 @connect(
@@ -18,16 +17,18 @@ import { PlaceBlocks, PlaceUpcomingBlocks } from '../../components';
   }),
   {
     load,
+    placeCloseMedia,
     placeToggle
   }
 )
 export default class Place extends Component {
   static propTypes = {
     load: PropTypes.func.isRequired,
-    open: PropTypes.bool.isRequired,
     mediaOpen: PropTypes.bool.isRequired,
+    open: PropTypes.bool.isRequired,
     params: PropTypes.object.isRequired,
     place: PropTypes.object.isRequired,
+    placeCloseMedia: PropTypes.func.isRequired,
     placeToggle: PropTypes.func.isRequired
   }
 
@@ -53,7 +54,6 @@ export default class Place extends Component {
       <PlaceBlocks {...this.props} />;
     const tip = open ? 'View map full screen' : 'View place information';
     const subtitle = current ? <h2 className="place__header__subtitle">Current place</h2> : null;
-    const photos = mediaOpen ? <Photos place={place} /> : null;
     const klass = classNames('place-wrap', { 'place-wrap--open': open }, { 'place-wrap--photos': mediaOpen });
     const description = `${mediaOpen ? 'Photos from when ' : ''}Lillian and Caleb stop in ${fullTitle}`;
 
@@ -66,6 +66,9 @@ export default class Place extends Component {
           <Icon className="place-wrap__toggle__icon place-wrap__toggle__close">
             <path d="M20.5,3L20.34,3,15,5.1,9,3,3.36,4.9A0.5,0.5,0,0,0,3,5.38V20.5a0.5,0.5,0,0,0,.5.5l0.16,0L9,18.9,15,21l5.64-1.9A0.5,0.5,0,0,0,21,18.62V3.5A0.5,0.5,0,0,0,20.5,3ZM15,19L9,16.89V5l6,2.11V19Z" />
           </Icon>
+        </a>
+        <a className="photos__close" onClick={this.props.placeCloseMedia}>
+          <Close />
         </a>
         <main className="place">
           <Helmet
@@ -84,7 +87,9 @@ export default class Place extends Component {
             <div className="place__header__bg" style={{ backgroundImage: `url(/images/cities/${slug}.jpg)` }}></div>
           </header>
           {blocks}
-          <div className="photos">{photos}</div>
+          <div className="photos">
+            <PlacePhotos place={place} />
+          </div>
         </main>
       </div>
     );

@@ -7,6 +7,7 @@
   right: 0;
   top: 0;
   transition: width $transition-timing-dramatic $transition-function-dramatic;
+  transition-property: right, width;
   width: 100%;
   z-index: $z-map;
 
@@ -57,11 +58,16 @@
       width: calc(100% - #{$place-width});
     }
   }
+
+  &--media-open {
+    .map {
+      right: -100%;
+    }
+  }
 }
 
 @media (max-width: $place-width * 2) {
   .map {
-
     &--placed {
       .map {
         width: calc(100% - #{$body-width-min});

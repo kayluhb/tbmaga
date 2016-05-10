@@ -96,6 +96,12 @@
   }
 }
 
+.map--media-open {
+  .menu {
+    right: -200px;
+  }
+}
+
 .map--collapsed {
   .menu {
     &__toggle {

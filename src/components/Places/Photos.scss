@@ -40,13 +40,14 @@
     cursor: pointer;
     display: block;
     fill: $col-white;
-    height: 40px;
-    line-height: 36px;
+    height: 42px;
+    line-height: 38px;
     position: fixed;
-    right: 20px;
+    right: -100px;
     text-align: center;
-    top: 120px;
-    width: 40px;
+    transition: right $transition-timing $transition-function;
+    top: 40px;
+    width: 42px;
 
     &:hover {
       border-color: $col-blue-light;
@@ -64,10 +65,15 @@
   }
 }
 
-.map--placed .place-wrap--photos {
+.map--media-open {
   .photos {
     top: 100px;
     transition-delay: .6s;
+
+    &__close {
+      right: 38px;
+      transition-delay: .6s;
+    }
   }
 }
 

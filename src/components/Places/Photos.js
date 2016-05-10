@@ -1,22 +1,9 @@
 import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
 
 import './Photos.scss';
-import { Close } from '../../components/Icons';
-import { placeCloseMedia } from '../../redux/modules/actions';
 
-@connect(
-  state => ({
-    mediaOpen: state.place.mediaOpen
-  }),
-  {
-    placeCloseMedia
-  }
-)
 export default class Photos extends Component {
   static propTypes = {
-    mediaOpen: PropTypes.bool.isRequired,
-    placeCloseMedia: PropTypes.func.isRequired,
     place: PropTypes.object.isRequired
   }
 
@@ -24,7 +11,9 @@ export default class Photos extends Component {
     if (typeof instgrm === 'undefined') {
       return;
     }
-    instgrm.Embeds.process();
+    setTimeout(() => {
+      instgrm.Embeds.process();
+    }, 200);
   }
 
   imgs(place) {
@@ -58,9 +47,6 @@ export default class Photos extends Component {
     return (
       <div>
         {this.imgs(place)}
-        <a className="photos__close" onClick={this.props.placeCloseMedia}>
-          <Close />
-        </a>
       </div>
     );
   }

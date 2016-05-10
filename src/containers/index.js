@@ -10,4 +10,3 @@ export Contact from './Contact/Contact';
 export Home from './Home/Home';
 export NotFound from './NotFound/NotFound';
 export Place from './Places/Place';
-export PlacePhotos from './Places/Photos';

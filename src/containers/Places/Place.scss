@@ -109,7 +109,7 @@
     }
 
     &--photos {
-      left: -$place-width;
+      left: -($place-width + 40px);
     }
   }
 }
