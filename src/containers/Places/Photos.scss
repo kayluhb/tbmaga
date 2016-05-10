@@ -34,6 +34,29 @@
     height: 100%;
   }
 
+  &__close {
+    border: 2px solid $col-white;
+    display: block;
+    fill: $col-white;
+    height: 40px;
+    line-height: 36px;
+    position: fixed;
+    right: 20px;
+    text-align: center;
+    top: 120px;
+    width: 40px;
+
+    &:hover {
+      border-color: $col-blue-light;
+      fill: $col-blue-light;
+    }
+
+    svg {
+      height: 24px;
+      width: 24px;
+    }
+  }
+
   .instagram-media {
     width: 428px !important;
   }

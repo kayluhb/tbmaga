@@ -1,7 +1,9 @@
 import Helmet from 'react-helmet';
 import React, { Component, PropTypes } from 'react';
+import { Link } from 'react-router';
 
 import './Photos.scss';
+import { Close } from '../../components/Icons';
 
 export default class Photos extends Component {
   static propTypes = {
@@ -42,7 +44,7 @@ export default class Photos extends Component {
 
   render() {
     const { place } = this.props;
-    const { fullTitle } = place.properties;
+    const { fullTitle, slug } = place.properties;
     const description = `Photos : Lillian and Caleb stop in ${fullTitle}`;
 
     return (
@@ -55,6 +57,9 @@ export default class Photos extends Component {
           ]}
         />
         {this.imgs(place)}
+        <Link className="photos__close" to={`/places/${slug}`}>
+          <Close />
+        </Link>
       </div>
     );
   }
