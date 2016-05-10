@@ -3,12 +3,12 @@
   "author": "Caleb Brown <kayluhb@gmail.com> (http://kayluhb.com)",
   "version": "1.0.0",
   "description": "Travel blog",
-  "homepage": "https://bitbucket.org/kayluhb/tbmaga#readme",
+  "homepage": "https://github.com/kayluhb/tbmaga#readme",
   "license": "MIT",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://bitbucket.org/kayluhb/tbmaga.git"
+    "url": "git+https://github.com/kayluhb/tbmaga.git"
   },
   "main": "bin/server.js",
   "scripts": {
