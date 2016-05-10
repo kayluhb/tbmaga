@@ -107,6 +107,10 @@
         }
       }
     }
+
+    &--photos {
+      left: -$place-width;
+    }
   }
 }
 

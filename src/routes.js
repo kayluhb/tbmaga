@@ -16,9 +16,7 @@ export default function routes() {
       <IndexRoute component={Place} />
       <Route component={About} path="about" />
       <Route component={Contact} path="contact" />
-      <Route component={Place} path="places/:slug">
-        <Route component={Place} path=":subdir" />
-      </Route>
+      <Route component={Place} path="places/:slug" />
       <Route component={NotFound} path="*" status={404} />
     </Route>
   );

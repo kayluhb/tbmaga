@@ -1,12 +1,22 @@
-import Helmet from 'react-helmet';
 import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
+import { connect } from 'react-redux';
 
 import './Photos.scss';
 import { Close } from '../../components/Icons';
+import { placeCloseMedia } from '../../redux/modules/actions';
 
+@connect(
+  state => ({
+    mediaOpen: state.place.mediaOpen
+  }),
+  {
+    placeCloseMedia
+  }
+)
 export default class Photos extends Component {
   static propTypes = {
+    mediaOpen: PropTypes.bool.isRequired,
+    placeCloseMedia: PropTypes.func.isRequired,
     place: PropTypes.object.isRequired
   }
 
@@ -44,22 +54,13 @@ export default class Photos extends Component {
 
   render() {
     const { place } = this.props;
-    const { fullTitle, slug } = place.properties;
-    const description = `Photos : Lillian and Caleb stop in ${fullTitle}`;
 
     return (
-      <div className="photos">
-        <Helmet
-          title={fullTitle}
-          meta={[
-              { name: 'description', content: description },
-              { property: 'og:description', content: description },
-          ]}
-        />
+      <div>
         {this.imgs(place)}
-        <Link className="photos__close" to={`/places/${slug}`}>
+        <a className="photos__close" onClick={this.props.placeCloseMedia}>
           <Close />
-        </Link>
+        </a>
       </div>
     );
   }

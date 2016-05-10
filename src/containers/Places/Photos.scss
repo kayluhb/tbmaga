@@ -3,11 +3,12 @@
 .photos {
   background: $col-blue-dark;
   height: 554px;
-  left: $place-width;
+  left: 0;
   overflow-x: scroll;
   position: fixed;
-  top: 100px;
-  width: calc(100% - #{$place-width});
+  top: 100%;
+  transition: top $transition-timing-dramatic $transition-function-dramatic;
+  width: 100%;
   z-index: $z-photos;
 
   &__list {
@@ -36,6 +37,7 @@
 
   &__close {
     border: 2px solid $col-white;
+    cursor: pointer;
     display: block;
     fill: $col-white;
     height: 40px;
@@ -62,9 +64,16 @@
   }
 }
 
-@media (max-width: $place-width * 2) {
+.map--placed .place-wrap--photos {
   .photos {
-    left: $body-width-min;
-    width: calc(100% - #{$body-width-min});
+    top: 100px;
+    transition-delay: .6s;
   }
 }
+
+// @media (max-width: $place-width * 2) {
+//   .photos {
+//     left: $body-width-min;
+//     width: calc(100% - #{$body-width-min});
+//   }
+// }

@@ -4,16 +4,17 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
 import './Place.scss';
-import { Icon } from '../../components/Icons';
-import { PlaceBlocks, PlaceUpcomingBlocks } from '../../components';
-import { load, placeToggle } from '../../redux/modules/actions';
 import Photos from './Photos';
+import { Icon } from '../../components/Icons';
+import { load, placeToggle } from '../../redux/modules/actions';
+import { PlaceBlocks, PlaceUpcomingBlocks } from '../../components';
 
 /* eslint-disable max-len */
 @connect(
   state => ({
     place: state.map.place,
-    open: state.place.open
+    open: state.place.open,
+    mediaOpen: state.place.mediaOpen
   }),
   {
     load,
@@ -23,7 +24,8 @@ import Photos from './Photos';
 export default class Place extends Component {
   static propTypes = {
     load: PropTypes.func.isRequired,
-    open: PropTypes.bool,
+    open: PropTypes.bool.isRequired,
+    mediaOpen: PropTypes.bool.isRequired,
     params: PropTypes.object.isRequired,
     place: PropTypes.object.isRequired,
     placeToggle: PropTypes.func.isRequired
@@ -43,24 +45,17 @@ export default class Place extends Component {
     this.props.load(slug);
   }
 
-  // shouldComponentUpdate(nextProps) {
-  //   console.log(nextProps.params.slug, this.props.place.properties.slug);
-  //   return true;
-  // }
-
   render() {
-    const { open, place } = this.props;
+    const { mediaOpen, open, place } = this.props;
     const { current } = place;
     const { fullTitle, slug } = place.properties;
-    const { subdir } = this.props.params;
     const blocks = place.upcoming || place.atx ? <PlaceUpcomingBlocks {...this.props} /> :
       <PlaceBlocks {...this.props} />;
     const tip = open ? 'View map full screen' : 'View place information';
     const subtitle = current ? <h2 className="place__header__subtitle">Current place</h2> : null;
-    const hasPhotos = subdir === 'photos';
-    const photos = hasPhotos ? <Photos place={place} /> : null;
-    const klass = classNames('place-wrap', { 'place-wrap--open': open }, { 'place-wrap--photos': hasPhotos });
-    const description = `${hasPhotos ? 'Photos from when ' : ''}Lillian and Caleb stop in ${fullTitle}`;
+    const photos = mediaOpen ? <Photos place={place} /> : null;
+    const klass = classNames('place-wrap', { 'place-wrap--open': open }, { 'place-wrap--photos': mediaOpen });
+    const description = `${mediaOpen ? 'Photos from when ' : ''}Lillian and Caleb stop in ${fullTitle}`;
 
     return (
       <div className={klass}>
@@ -74,7 +69,7 @@ export default class Place extends Component {
         </a>
         <main className="place">
           <Helmet
-            title={`${hasPhotos ? 'Photos from ' : ''}${fullTitle}`}
+            title={`${mediaOpen ? 'Photos from ' : ''}${fullTitle}`}
             meta={[
                 { name: 'description', content: description },
                 { property: 'og:description', content: description },
@@ -89,7 +84,7 @@ export default class Place extends Component {
             <div className="place__header__bg" style={{ backgroundImage: `url(/images/cities/${slug}.jpg)` }}></div>
           </header>
           {blocks}
-          {photos}
+          <div className="photos">{photos}</div>
         </main>
       </div>
     );

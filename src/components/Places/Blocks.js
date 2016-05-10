@@ -1,15 +1,18 @@
 import classNames from 'classnames';
 import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
+import { connect } from 'react-redux';
 
 import './Blocks.scss';
 import Block from './Block';
 import { Car, Day, Icon, Photo } from '../Icons';
 import { getTotalMiles } from '../../redux/modules/map';
+import { placeOpenMedia } from '../../redux/modules/actions';
 
+@connect(state => ({ mediaOpen: state.place.mediaOpen }), { placeOpenMedia })
 export default class Blocks extends Component {
   static propTypes = {
-    place: PropTypes.object.isRequired
+    place: PropTypes.object.isRequired,
+    placeOpenMedia: PropTypes.func.isRequired
   };
 
   firstPlace(id) {
@@ -58,9 +61,9 @@ export default class Blocks extends Component {
     }
 
     return (
-      <Link
+      <a
         className={classNames([blockFullClass, 'block--photos'])}
-        to={`/places/${slug}/photos`}
+        onClick={this.props.placeOpenMedia}
       >
         <span className="block__label">
           <Photo className="block__icon" />
@@ -73,7 +76,7 @@ export default class Blocks extends Component {
             </li>
           )}
         </ul>
-      </Link>
+      </a>
     );
   }
 
