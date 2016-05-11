@@ -12,7 +12,7 @@
 
   &__toggle {
     border: 2px solid $col-white;
-    border-left: 0;
+    border-left-width: 0;
     cursor: pointer;
     display: block;
     height: 40px;
@@ -21,6 +21,7 @@
     right: -40px;
     top: 0;
     width: 40px;
+    z-index: 4;
 
     &,
     &__icon {
@@ -118,5 +119,26 @@
   .place-wrap {
     left: -$body-width-min;
     width: $body-width-min;
+  }
+}
+
+@media (max-width: $break-phone) {
+  .place-wrap {
+    left: -100%;
+    width: 100%;
+
+    &__toggle {
+      border-left-width: 0;
+      border-right-width: 2px;
+      right: -40px;
+    }
+  }
+
+  .map--placed .place-wrap--open {
+    .place-wrap__toggle {
+      border-left-width: 2px;
+      border-right-width: 0;
+      right: 0;
+    }
   }
 }

@@ -88,3 +88,15 @@
     }
   }
 }
+
+@media (max-width: $break-phone) {
+  .map {
+    width: 100%;
+
+    &--placed {
+      .map {
+        right: -100%;
+      }
+    }
+  }
+}
