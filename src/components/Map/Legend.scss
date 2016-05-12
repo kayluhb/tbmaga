@@ -53,3 +53,14 @@
     }
   }
 }
+
+@media (max-width: $break-phone) {
+  .map {
+    &--placed {
+      .legend {
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+  }
+}

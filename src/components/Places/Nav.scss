@@ -71,3 +71,28 @@
     }
   }
 }
+
+@media (max-width: $break-phone) {
+  .map {
+    &--placed {
+      .nav {
+        bottom: auto;
+        height: 80px;
+        left: auto;
+        right: 0;
+        top: 138px;
+        width: 40px;
+
+        &__prev {
+          left: 0;
+          top: 0;
+        }
+
+        &__next {
+          left: 0;
+          top: 38px;
+        }
+      }
+    }
+  }
+}

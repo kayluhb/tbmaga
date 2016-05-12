@@ -141,4 +141,13 @@
       right: 0;
     }
   }
+
+  .place {
+    &__header {
+      &__title {
+        font-size: 30px;
+        padding-right: 60px;
+      }
+    }
+  }
 }
