@@ -26,7 +26,7 @@ const initialState = {
           prev: 22,
           slug: 'brooklyn',
           title: 'Brooklyn',
-          why: 'Lillian and Caleb have lived here for years.',
+          why: 'After years of living here, Lillian and Caleb are moving to Austin, Texas to be closer to family and get a dog.',
           soundtrack: [
             {
               title: 'LCD Soundsystem - New York I Love You, but You\'re Bringing Me Down',
@@ -64,7 +64,7 @@ const initialState = {
           prev: 1,
           slug: 'ann-arbor',
           title: 'Ann Arbor',
-          why: 'Caleb\'s family has a long history here and his mother and other family members live here.'
+          why: 'Caleb\'s family has a long history in Ann Arbor and his mother and other family members also live here.'
         },
         geometry: {
           type: geometryType,
@@ -84,7 +84,7 @@ const initialState = {
           prev: 2,
           slug: 'columbus',
           title: 'Columbus',
-          why: 'Caleb\'s sister her family live here'
+          why: 'Caleb\'s sister Melissa and her family live here.'
         },
         geometry: {
           type: geometryType,
@@ -104,7 +104,7 @@ const initialState = {
           prev: 3,
           slug: 'grand-blanc',
           title: 'Grand Blanc',
-          why: 'Caleb\'s sister and her family live here'
+          why: 'Caleb\'s sister Rebecca and her family live here.'
         },
         geometry: {
           type: geometryType,
@@ -124,7 +124,7 @@ const initialState = {
           prev: 4,
           slug: 'springfield',
           title: 'Springfield',
-          why: 'Caleb\'s dad lives here'
+          why: 'Caleb\'s dad lives here.'
         },
         geometry: {
           type: geometryType,
@@ -144,7 +144,7 @@ const initialState = {
           prev: 5,
           slug: 'chicago',
           title: 'Chicago',
-          why: 'Lillian and Caleb have friends here'
+          why: 'Lillian and Caleb love Chicago and the friends that live here.'
         },
         geometry: {
           type: geometryType,
@@ -164,7 +164,7 @@ const initialState = {
           prev: 6,
           slug: 'milwaukee',
           title: 'Milwaukee',
-          why: 'Lillian and Caleb always wanted to visit here'
+          why: 'We are not sure, but we hear it\'s cool and we like good food and beer.'
         },
         geometry: {
           type: geometryType,
@@ -184,7 +184,7 @@ const initialState = {
           prev: 7,
           slug: 'taliesin',
           title: 'Taliesin',
-          why: 'Frank Loyd Wright is here'
+          why: 'Frank Loyd Wright.'
         },
         geometry: {
           type: geometryType,
@@ -204,7 +204,7 @@ const initialState = {
           prev: 8,
           slug: 'the-badlands',
           title: 'The Badlands',
-          why: 'Lillian\'s uncle recommended this'
+          why: 'Lillian\'s uncle John recommended this as a great place to explore, and he\'s a road trip expert.'
         },
         geometry: {
           type: geometryType,
@@ -224,7 +224,7 @@ const initialState = {
           prev: 9,
           slug: 'grand-teton',
           title: 'Grand Teton',
-          why: 'Lillian\'s uncle recommended this'
+          why: 'Everyone who has visited this place recommends it.'
         },
         geometry: {
           type: geometryType,
@@ -244,7 +244,7 @@ const initialState = {
           prev: 10,
           slug: 'yellowstone',
           title: 'Yellowstone',
-          why: 'Lillian\'s parent recently visited'
+          why: 'It\'s fucking Yellowstone man. Do you need a reason why?'
         },
         geometry: {
           type: geometryType,
@@ -264,7 +264,7 @@ const initialState = {
           prev: 11,
           slug: 'missoula',
           title: 'Missoula',
-          why: ''
+          why: 'Midway to Seattle, it was recommended by a friend who has a friend that is a baker here.'
         },
         geometry: {
           type: geometryType,
@@ -284,7 +284,7 @@ const initialState = {
           prev: 12,
           slug: 'seattle',
           title: 'Seattle',
-          why: 'Lillian used to live here'
+          why: 'Lillian used to live here and wants to share it with Caleb.'
         },
         geometry: {
           type: geometryType,
@@ -304,7 +304,7 @@ const initialState = {
           prev: 13,
           slug: 'portland',
           title: 'Portland',
-          why: 'Caleb\'s cousin lives here'
+          why: 'The Austin of the PNW, Caleb\'s cousin lives here and they have great coffee and beer.'
         },
         geometry: {
           type: geometryType,
@@ -324,7 +324,7 @@ const initialState = {
           prev: 14,
           slug: 'san-francisco',
           title: 'San Francisco',
-          why: 'This is one of Lillian and Caleb\'s favorite cities'
+          why: 'This is one of Lillian and Caleb\'s favorite cities. Also, Tartine.'
         },
         geometry: {
           type: geometryType,
@@ -344,7 +344,7 @@ const initialState = {
           prev: 15,
           slug: 'los-angeles',
           title: 'Los Angeles',
-          why: 'Caleb has never been'
+          why: 'Lillian\'s cousin and childhood friend lives here. And Caleb wants to see palm trees.'
         },
         geometry: {
           type: geometryType,
@@ -357,18 +357,18 @@ const initialState = {
         properties: {
           date: 'June 2nd',
           day: 15,
-          fullTitle: 'San Diego, CA',
+          fullTitle: 'Palm Springs, CA',
           id: 17,
-          miles: 124,
+          miles: 107,
           next: 18,
           prev: 16,
-          slug: 'san-diego',
-          title: 'San Diego',
-          why: 'To try out the IPAs'
+          slug: 'palm-springs',
+          title: 'Palm Springs',
+          why: 'We\'ve never been and we hear it\'s FABULOUS.'
         },
         geometry: {
           type: geometryType,
-          coordinates: [-117.161084, 32.715738]
+          coordinates: [-116.7040323, 33.7715534]
         }
       },
       {
@@ -384,7 +384,7 @@ const initialState = {
           prev: 17,
           slug: 'grand-canyon',
           title: 'Grand Canyon',
-          why: 'Caleb has never been'
+          why: 'We want to feel small while the world feels big around us.'
         },
         geometry: {
           type: geometryType,
@@ -404,7 +404,7 @@ const initialState = {
           prev: 18,
           slug: 'carlsbad',
           title: 'Carlsbad',
-          why: 'Caleb loves caves'
+          why: 'Caleb loves caves.'
         },
         geometry: {
           type: geometryType,
@@ -424,7 +424,7 @@ const initialState = {
           prev: 19,
           slug: 'marfa',
           title: 'Marfa',
-          why: 'Beyonce once went here'
+          why: 'There is too much cool here to not go. Also, Beyonce has been.'
         },
         geometry: {
           type: geometryType,
@@ -444,7 +444,7 @@ const initialState = {
           prev: 20,
           slug: 'big-bend',
           title: 'Big Bend',
-          why: ''
+          why: 'Caleb needs to go to West Texas to be able to call himself a true Texan.'
         },
         geometry: {
           type: geometryType,
@@ -464,7 +464,7 @@ const initialState = {
           prev: 21,
           slug: 'austin',
           title: 'Austin',
-          why: 'Our new home'
+          why: '"There is a freedom you begin to feel the closer you get to Austin, Texas" - Willie'
         },
         geometry: {
           type: geometryType,
