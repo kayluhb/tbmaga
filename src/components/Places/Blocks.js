@@ -54,10 +54,15 @@ export default class Blocks extends Component {
   }
 
   photoBlock(place, blockFullClass) {
-    const { photos, slug, title } = place.properties;
+    const { slug, title } = place.properties;
+    let { photos } = place.properties;
 
     if (photos === undefined || photos < 1) {
       return [];
+    }
+
+    if (photos > 6) {
+      photos = 6;
     }
 
     return (
