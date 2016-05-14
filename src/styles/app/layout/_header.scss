@@ -1,8 +1,9 @@
 .header {
   color: $col-white;
-  left: 30px;
+  left: 0;
   min-width: $body-width-min;
   position: fixed;
+  text-align: center;
   top: 20px;
   z-index: $z-header;
 

@@ -22,7 +22,7 @@ const initialState = {
           id: 1,
           miles: 0,
           next: 2,
-          photos: 3,
+          photos: 10,
           prev: 22,
           slug: 'brooklyn',
           title: 'Brooklyn',
