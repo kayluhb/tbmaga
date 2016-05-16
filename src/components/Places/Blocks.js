@@ -76,7 +76,7 @@ export default class Blocks extends Component {
         </span>
         <ul className="block--photos__list">
           {Array(photos).fill().map((i, idx) =>
-            <li key={idx}>
+            <li key={`photo-${idx}`}>
               <img src={`/images/${slug}/${(idx + 1)}_th.jpg`} alt={title} />
             </li>
           )}

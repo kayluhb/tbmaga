@@ -28,7 +28,7 @@ export default class Legend extends Component {
       left += place.properties.miles;
       mis.push(
         <div
-          key={place.properties.miles}
+          key={`${i}-${place.properties.miles}`}
           className="legend__mile"
           style={{ left: this.milesToPercent(totalMiles, left) }}
         />
