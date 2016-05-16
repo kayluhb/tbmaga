@@ -13,7 +13,7 @@ const initialState = {
     type: 'FeatureCollection',
     features: [
       {
-        current: true,
+        past: true,
         type,
         properties: {
           date: 'May 15th',
@@ -26,7 +26,7 @@ const initialState = {
           prev: 22,
           slug: 'brooklyn',
           title: 'Brooklyn',
-          why: 'After years of living here, Lillian and Caleb are moving to Austin, Texas to be closer to family and get a dog.',
+          why: 'After years of living here, Lillian and Caleb are moving to Austin, Texas to be closer to family, have their own washer and dryer, and get a dog.',
           soundtrack: [
             {
               title: 'LCD Soundsystem - New York I Love You, but You\'re Bringing Me Down',
@@ -52,14 +52,14 @@ const initialState = {
         }
       },
       {
-        upcoming: true,
+        current: true,
         type,
         properties: {
           date: 'May 15th',
           day: 1,
           fullTitle: 'Ann Arbor, MI',
           id: 2,
-          miles: 633,
+          miles: 646,
           next: 3,
           prev: 1,
           slug: 'ann-arbor',
@@ -257,20 +257,40 @@ const initialState = {
         properties: {
           date: 'May 27th',
           day: 11,
-          fullTitle: 'Missoula, MT',
+          fullTitle: 'Glacier National Park, MT',
           id: 12,
-          miles: 262,
+          miles: 377,
           next: 13,
           prev: 11,
-          slug: 'missoula',
-          title: 'Missoula',
-          why: 'Midway to Seattle, it was recommended by a friend who has a friend that is a baker here.'
+          slug: 'glacier-national-park',
+          title: 'Glacier National Park',
+          why: 'Danny DeSimone recommended it and we trust him.'
         },
         geometry: {
           type: geometryType,
-          coordinates: [-114.1582501, 46.8762361]
+          coordinates: [-115.9703907, 47.7435717]
         }
       },
+      // {
+      //   upcoming: true,
+      //   type,
+      //   properties: {
+      //     date: 'May 27th',
+      //     day: 11,
+      //     fullTitle: 'Missoula, MT',
+      //     id: 12,
+      //     miles: 262,
+      //     next: 13,
+      //     prev: 11,
+      //     slug: 'missoula',
+      //     title: 'Missoula',
+      //     why: 'Midway to Seattle, it was recommended by a friend who has a friend that is a baker here.'
+      //   },
+      //   geometry: {
+      //     type: geometryType,
+      //     coordinates: [-114.1582501, 46.8762361]
+      //   }
+      // },
       {
         upcoming: true,
         type,
@@ -397,8 +417,48 @@ const initialState = {
         properties: {
           date: 'June 6th',
           day: 17,
-          fullTitle: 'Carlsbad, NM',
+          fullTitle: 'Antelope Canyon, AZ',
           id: 19,
+          miles: 708,
+          next: 20,
+          prev: 18,
+          slug: 'antelope-canyon',
+          title: 'Antelope Canyon',
+          why: 'It looks amazing in photos but we want to see it with our own four eyes. '
+        },
+        geometry: {
+          type: geometryType,
+          coordinates: [-111.376594, 36.8618613]
+        }
+      },
+      {
+        upcoming: true,
+        type,
+        properties: {
+          date: 'June 7th',
+          day: 18,
+          fullTitle: 'Albuquerque, TX',
+          id: 20,
+          miles: 186,
+          next: 21,
+          prev: 19,
+          slug: 'albuquerque',
+          title: 'Albuquerque',
+          why: 'Because we need a place to stop between Grand Canyon & Carlsbad.'
+        },
+        geometry: {
+          type: geometryType,
+          coordinates: [-106.816908, 35.082329]
+        }
+      },
+      {
+        upcoming: true,
+        type,
+        properties: {
+          date: 'June 6th',
+          day: 17,
+          fullTitle: 'Carlsbad, NM',
+          id: 21,
           miles: 708,
           next: 20,
           prev: 18,
@@ -418,7 +478,7 @@ const initialState = {
           date: 'June 7th',
           day: 18,
           fullTitle: 'Marfa, TX',
-          id: 20,
+          id: 22,
           miles: 186,
           next: 21,
           prev: 19,
@@ -438,7 +498,7 @@ const initialState = {
           date: 'June 8th',
           day: 18,
           fullTitle: 'Big Bend National Park, TX',
-          id: 21,
+          id: 23,
           miles: 98,
           next: 22,
           prev: 20,
@@ -458,7 +518,7 @@ const initialState = {
           date: 'June 15th',
           day: 30,
           fullTitle: 'Austin, TX',
-          id: 22,
+          id: 24,
           miles: 435,
           next: 1,
           prev: 21,
