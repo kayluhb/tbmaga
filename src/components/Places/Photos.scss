@@ -2,7 +2,7 @@
 
 .photos {
   background: $col-blue-dark;
-  height: 554px;
+  height: 100%;
   left: 0;
   overflow-x: scroll;
   position: fixed;
@@ -11,7 +11,12 @@
   width: 100%;
   z-index: $z-photos;
 
+  &__list-wrap {
+    height: 100%;
+  }
+
   &__list {
+    height: 100%;
     margin: 0;
     padding: 0 10px;
     white-space: nowrap;
@@ -19,10 +24,9 @@
   }
 
   &__item {
-    background: $col-black;
     float: left;
-    height: 534px;
-    margin: 10px 10px 10px 0;
+    height: 100%;
+    margin: 0 10px 0 0;
     padding: 0;
 
     &--media {
@@ -32,6 +36,7 @@
   }
 
   &__img {
+    display: block;
     height: 100%;
   }
 
@@ -46,8 +51,8 @@
     position: fixed;
     right: -100px;
     text-align: center;
-    transition: right $transition-timing $transition-function;
     top: 40px;
+    transition: right $transition-timing $transition-function;
     width: 42px;
 
     &:hover {
@@ -62,13 +67,14 @@
   }
 
   .instagram-media {
+    margin-top: 80px !important;
     width: 428px !important;
   }
 }
 
 .map--media-open {
   .photos {
-    top: 100px;
+    top: 0;
     transition-delay: .6s;
 
     &__close {

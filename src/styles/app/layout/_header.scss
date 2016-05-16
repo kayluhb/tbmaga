@@ -36,4 +36,13 @@
       }
     }
   }
+
+  &--media-open {
+    .header {
+      &__title,
+      &__subtitle {
+        text-shadow: 0 0 2px rgba($col-black, .75);
+      }
+    }
+  }
 }

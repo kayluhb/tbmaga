@@ -45,7 +45,7 @@ export default class Photos extends Component {
     const { place } = this.props;
 
     return (
-      <div>
+      <div className="photos__list-wrap">
         {this.imgs(place)}
       </div>
     );

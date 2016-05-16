@@ -29,7 +29,8 @@
 }
 
 .map {
-  &--collapsed {
+  &--collapsed,
+  &--media-open {
     .legend {
       top: -10px;
     }
