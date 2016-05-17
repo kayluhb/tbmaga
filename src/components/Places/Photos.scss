@@ -54,6 +54,7 @@
     top: 40px;
     transition: right $transition-timing $transition-function;
     width: 42px;
+    z-index: $z-close;
 
     &:hover {
       border-color: $col-blue-light;
