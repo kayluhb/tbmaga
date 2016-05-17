@@ -52,7 +52,7 @@ const initialState = {
         }
       },
       {
-        current: true,
+        past: true,
         type,
         properties: {
           date: 'May 15th',
@@ -107,7 +107,7 @@ const initialState = {
         }
       },
       {
-        upcoming: true,
+        past: true,
         type,
         properties: {
           date: 'May 16th',
@@ -127,7 +127,7 @@ const initialState = {
         }
       },
       {
-        upcoming: true,
+        current: true,
         type,
         properties: {
           date: 'May 17th',
