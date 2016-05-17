@@ -114,7 +114,7 @@ const initialState = {
           day: 2,
           fullTitle: 'Columbus, OH',
           id: 3,
-          miles: 193,
+          miles: 241,
           next: 4,
           prev: 2,
           photos: 15,
