@@ -23,7 +23,7 @@ const initialState = {
           miles: 0,
           next: 2,
           photos: 10,
-          prev: 22,
+          prev: 25,
           slug: 'brooklyn',
           title: 'Brooklyn',
           why: 'After years of living here, Lillian and Caleb are moving to Austin, Texas to be closer to family, have their own washer and dryer, and get a dog.',
@@ -156,7 +156,7 @@ const initialState = {
         }
       },
       {
-        current: true,
+        past: true,
         type,
         properties: {
           date: 'May 18th',
@@ -190,17 +190,46 @@ const initialState = {
         }
       },
       {
-        upcoming: true,
+        current: true,
         type,
         properties: {
           date: 'May 19th',
           day: 5,
           fullTitle: 'Chicago, IL',
           id: 6,
-          miles: 208,
+          media: [],
+          miles: 141,
           next: 7,
+          photos: 28,
           prev: 5,
           slug: 'chicago',
+          soundtrack: [
+            {
+              title: 'The Rolling Stones - Route 66',
+              img: 'stones.jpg'
+            },
+
+            {
+              title: 'Bob Dylan - Lay Lady Lay',
+              img: 'bob.jpg'
+            },
+            {
+              title: 'Chance the Rapper - NaNa',
+              img: 'chance.jpg'
+            },
+            {
+              title: 'Kanye West - Ultralight Beam',
+              img: 'kanye.jpg'
+            },
+            {
+              title: 'Spoon - Chicago at Night',
+              img: 'spoon.jpg'
+            },
+            {
+              title: 'Guy Clark - L.A. Freeway',
+              img: 'guy-clark.jpg'
+            }
+          ],
           title: 'Chicago',
           why: 'Lillian and Caleb love Chicago and the friends that live here.'
         },
@@ -215,11 +244,31 @@ const initialState = {
         properties: {
           date: 'May 20th',
           day: 6,
-          fullTitle: 'Milwaukee, WI',
+          fullTitle: 'Elgin, IL',
           id: 7,
-          miles: 92,
+          miles: 62,
           next: 8,
           prev: 6,
+          slug: 'elgin',
+          title: 'Elgin',
+          why: 'Lillian\'s aunt Katherine and her family live here.'
+        },
+        geometry: {
+          type: geometryType,
+          coordinates: [-88.4061454, 42.0373577]
+        }
+      },
+      {
+        upcoming: true,
+        type,
+        properties: {
+          date: 'May 20th',
+          day: 6,
+          fullTitle: 'Milwaukee, WI',
+          id: 8,
+          miles: 106,
+          next: 9,
+          prev: 7,
           slug: 'milwaukee',
           title: 'Milwaukee',
           why: 'We are not sure, but we hear it\'s cool and we like good food and beer.'
@@ -236,10 +285,10 @@ const initialState = {
           date: 'May 21st',
           day: 7,
           fullTitle: 'Taliesin, WI',
-          id: 8,
+          id: 9,
           miles: 117,
-          next: 9,
-          prev: 7,
+          next: 10,
+          prev: 8,
           slug: 'taliesin',
           title: 'Taliesin',
           why: 'Frank Loyd Wright.'
@@ -256,10 +305,10 @@ const initialState = {
           date: 'May 22nd',
           day: 8,
           fullTitle: 'The Badlands, SD',
-          id: 9,
+          id: 10,
           miles: 782,
-          next: 10,
-          prev: 8,
+          next: 11,
+          prev: 9,
           slug: 'the-badlands',
           title: 'The Badlands',
           why: 'Lillian\'s uncle John recommended this as a great place to explore, and he\'s a road trip expert.'
@@ -276,10 +325,10 @@ const initialState = {
           date: 'May 23rd',
           day: 9,
           fullTitle: 'Grand Teton, WY',
-          id: 10,
+          id: 11,
           miles: 560,
-          next: 11,
-          prev: 9,
+          next: 12,
+          prev: 10,
           slug: 'grand-teton',
           title: 'Grand Teton',
           why: 'Everyone who has visited this place recommends it.'
@@ -296,10 +345,10 @@ const initialState = {
           date: 'May 25th',
           day: 10,
           fullTitle: 'Yellowstone, WY',
-          id: 11,
+          id: 12,
           miles: 130,
-          next: 12,
-          prev: 10,
+          next: 13,
+          prev: 11,
           slug: 'yellowstone',
           title: 'Yellowstone',
           why: 'It\'s fucking Yellowstone man. Do you need a reason why?'
@@ -316,10 +365,10 @@ const initialState = {
           date: 'May 27th',
           day: 11,
           fullTitle: 'Glacier National Park, MT',
-          id: 12,
+          id: 13,
           miles: 377,
-          next: 13,
-          prev: 11,
+          next: 14,
+          prev: 12,
           slug: 'glacier-national-park',
           title: 'Glacier National Park',
           why: 'Danny DeSimone recommended it and we trust him.'
@@ -336,10 +385,10 @@ const initialState = {
           date: 'May 28th',
           day: 11,
           fullTitle: 'Seattle, WA',
-          id: 13,
+          id: 14,
           miles: 475,
-          next: 14,
-          prev: 12,
+          next: 15,
+          prev: 13,
           slug: 'seattle',
           title: 'Seattle',
           why: 'Lillian used to live here and wants to share it with Caleb.'
@@ -356,10 +405,10 @@ const initialState = {
           date: 'May 29th',
           day: 12,
           fullTitle: 'Portland, OR',
-          id: 14,
+          id: 15,
           miles: 174,
-          next: 15,
-          prev: 13,
+          next: 16,
+          prev: 14,
           slug: 'portland',
           title: 'Portland',
           why: 'The Austin of the PNW, Caleb\'s cousin lives here and they have great coffee and beer.'
@@ -376,10 +425,10 @@ const initialState = {
           date: 'May 31th',
           day: 13,
           fullTitle: 'San Francisco, CA',
-          id: 15,
+          id: 16,
           miles: 636,
-          next: 16,
-          prev: 14,
+          next: 17,
+          prev: 15,
           slug: 'san-francisco',
           title: 'San Francisco',
           why: 'This is one of Lillian and Caleb\'s favorite cities. Also, Tartine.'
@@ -396,10 +445,10 @@ const initialState = {
           date: 'June 1st',
           day: 14,
           fullTitle: 'Los Angeles, CA',
-          id: 16,
+          id: 17,
           miles: 383,
-          next: 17,
-          prev: 15,
+          next: 18,
+          prev: 16,
           slug: 'los-angeles',
           title: 'Los Angeles',
           why: 'Lillian\'s cousin and childhood friend lives here. And Caleb wants to see palm trees.'
@@ -416,10 +465,10 @@ const initialState = {
           date: 'June 2nd',
           day: 15,
           fullTitle: 'Palm Springs, CA',
-          id: 17,
+          id: 18,
           miles: 107,
-          next: 18,
-          prev: 16,
+          next: 19,
+          prev: 17,
           slug: 'palm-springs',
           title: 'Palm Springs',
           why: 'We\'ve never been and we hear it\'s FABULOUS.'
@@ -434,12 +483,12 @@ const initialState = {
         type,
         properties: {
           date: 'June 4th',
-          day: 16,
+          day: 19,
           fullTitle: 'Grand Canyon, AZ',
-          id: 18,
+          id: 19,
           miles: 552,
-          next: 19,
-          prev: 17,
+          next: 20,
+          prev: 18,
           slug: 'grand-canyon',
           title: 'Grand Canyon',
           why: 'We want to feel small while the world feels big around us.'
@@ -456,10 +505,10 @@ const initialState = {
           date: 'June 6th',
           day: 17,
           fullTitle: 'Antelope Canyon, AZ',
-          id: 19,
+          id: 20,
           miles: 708,
-          next: 20,
-          prev: 18,
+          next: 21,
+          prev: 19,
           slug: 'antelope-canyon',
           title: 'Antelope Canyon',
           why: 'It looks amazing in photos but we want to see it with our own four eyes. '
@@ -476,10 +525,10 @@ const initialState = {
           date: 'June 7th',
           day: 18,
           fullTitle: 'Albuquerque, TX',
-          id: 20,
+          id: 21,
           miles: 186,
-          next: 21,
-          prev: 19,
+          next: 22,
+          prev: 20,
           slug: 'albuquerque',
           title: 'Albuquerque',
           why: 'Because we need a place to stop between Grand Canyon & Carlsbad.'
@@ -496,10 +545,10 @@ const initialState = {
           date: 'June 6th',
           day: 17,
           fullTitle: 'Carlsbad, NM',
-          id: 21,
+          id: 22,
           miles: 708,
-          next: 22,
-          prev: 20,
+          next: 23,
+          prev: 21,
           slug: 'carlsbad',
           title: 'Carlsbad',
           why: 'Caleb loves caves.'
@@ -516,10 +565,10 @@ const initialState = {
           date: 'June 7th',
           day: 18,
           fullTitle: 'Marfa, TX',
-          id: 22,
+          id: 23,
           miles: 186,
-          next: 23,
-          prev: 21,
+          next: 24,
+          prev: 22,
           slug: 'marfa',
           title: 'Marfa',
           why: 'There is too much cool here to not go. Also, Beyonce has been.'
@@ -536,10 +585,10 @@ const initialState = {
           date: 'June 8th',
           day: 18,
           fullTitle: 'Big Bend National Park, TX',
-          id: 23,
+          id: 24,
           miles: 98,
-          next: 24,
-          prev: 22,
+          next: 25,
+          prev: 23,
           slug: 'big-bend',
           title: 'Big Bend',
           why: 'Caleb needs to go to West Texas to be able to call himself a true Texan.'
@@ -556,10 +605,10 @@ const initialState = {
           date: 'June 15th',
           day: 30,
           fullTitle: 'Austin, TX',
-          id: 24,
+          id: 25,
           miles: 435,
           next: 1,
-          prev: 23,
+          prev: 24,
           slug: 'austin',
           title: 'Austin',
           why: '"There is a freedom you begin to feel the closer you get to Austin, Texas" - Willie'
