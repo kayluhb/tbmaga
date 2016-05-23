@@ -23,15 +23,20 @@ export default class Photos extends Component {
       return [];
     }
 
+    let mediaEmbeds = null;
+    if (media !== undefined) {
+      mediaEmbeds = media.map((content, idx) =>
+        <li
+          className="photos__item photos__item--media"
+          dangerouslySetInnerHTML={{ __html: content }}
+          key={`media-${idx}`}
+        />
+      );
+    }
+
     return (
       <ul className="photos__list">
-        {media.map((content, idx) =>
-          <li
-            className="photos__item photos__item--media"
-            dangerouslySetInnerHTML={{ __html: content }}
-            key={`media-${idx}`}
-          />
-        )}
+        {mediaEmbeds}
         {Array(photos).fill().map((i, idx) =>
           <li className="photos__item" key={`img-${idx}`}>
             <img className="photos__img" src={`/images/${slug}/${(idx + 1)}.jpg`} alt={title} />
