@@ -287,7 +287,7 @@ const initialState = {
         }
       },
       {
-        current: true,
+        past: true,
         type,
         properties: {
           date: 'May 21st',
@@ -303,6 +303,12 @@ const initialState = {
           photos: 19,
           prev: 8,
           slug: 'taliesin',
+          soundtrack: [
+            {
+              title: 'Johnny Cash - Ring of Fire',
+              img: 'johnny.jpg'
+            },
+          ],
           title: 'Taliesin',
           why: 'Frank Loyd Wright.'
         },
@@ -312,14 +318,14 @@ const initialState = {
         }
       },
       {
-        upcoming: true,
+        current: true,
         type,
         properties: {
           date: 'May 22nd',
           day: 8,
           fullTitle: 'Badlands National Park, SD',
           id: 10,
-          photos: 25,
+          photos: 30,
           miles: 782,
           next: 11,
           prev: 9,
