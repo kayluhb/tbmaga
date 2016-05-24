@@ -325,7 +325,7 @@ const initialState = {
           day: 8,
           fullTitle: 'Badlands National Park, SD',
           id: 10,
-          photos: 30,
+          photos: 36,
           miles: 782,
           next: 11,
           prev: 9,
