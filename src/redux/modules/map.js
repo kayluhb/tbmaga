@@ -326,10 +326,24 @@ const initialState = {
           fullTitle: 'Badlands National Park, SD',
           id: 10,
           photos: 36,
-          miles: 782,
+          miles: 665,
           next: 11,
           prev: 9,
           slug: 'badlands',
+          soundtrack: [
+            {
+              title: 'Robert Earl Keen - Amarillo Highway',
+              img: 'robert-earl-keen.jpg'
+            },
+            {
+              title: 'Gillian Welch - I Dream a Highway',
+              img: 'gillian.jpg'
+            },
+            {
+              title: 'Metronomy - I Dream a Highway',
+              img: 'metronomy.jpg'
+            },
+          ],
           title: 'Badlands',
           why: 'Lillian\'s uncle John recommended this as a great place to explore, and he\'s a road trip expert.'
         },
