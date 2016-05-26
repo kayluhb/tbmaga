@@ -318,7 +318,7 @@ const initialState = {
         }
       },
       {
-        current: true,
+        past: true,
         type,
         properties: {
           date: 'May 22nd',
@@ -353,18 +353,23 @@ const initialState = {
         }
       },
       {
-        upcoming: true,
+        current: true,
         type,
         properties: {
           date: 'May 23rd',
           day: 9,
-          fullTitle: 'Grand Teton, WY',
+          fullTitle: 'Grand Tetons, WY',
           id: 11,
+          media: [
+            '<iframe width="711" height="400" src="https://www.youtube.com/embed/26TaxT1IVs8?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>',
+            '<iframe width="711" height="400" src="https://www.youtube.com/embed/gyoszQM5NC8?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>'
+          ],
           miles: 560,
           next: 12,
+          photos: 30,
           prev: 10,
-          slug: 'grand-teton',
-          title: 'Grand Teton',
+          slug: 'grand-tetons',
+          title: 'Grand Tetons',
           why: 'Everyone who has visited this place recommends it.'
         },
         geometry: {
@@ -382,6 +387,7 @@ const initialState = {
           id: 12,
           miles: 130,
           next: 13,
+          photos: 1,
           prev: 11,
           slug: 'yellowstone',
           title: 'Yellowstone',
@@ -396,20 +402,20 @@ const initialState = {
         upcoming: true,
         type,
         properties: {
-          date: 'May 27th',
+          date: 'May 25th',
           day: 11,
-          fullTitle: 'Glacier National Park, MT',
+          fullTitle: 'Missoula, MT',
           id: 13,
           miles: 377,
           next: 14,
           prev: 12,
-          slug: 'glacier-national-park',
-          title: 'Glacier National Park',
-          why: 'Danny DeSimone recommended it and we trust him.'
+          slug: 'missoula',
+          title: 'Missoula',
+          why: 'It\'s halfway between Seattle and Grand Tetons and our friend has a friend who\'s a baker here'
         },
         geometry: {
           type: geometryType,
-          coordinates: [-115.9703907, 47.7435717]
+          coordinates: [-114.05388, 46.8837455]
         }
       },
       {
@@ -417,7 +423,7 @@ const initialState = {
         type,
         properties: {
           date: 'May 28th',
-          day: 11,
+          day: 12,
           fullTitle: 'Seattle, WA',
           id: 14,
           miles: 475,
@@ -437,7 +443,7 @@ const initialState = {
         type,
         properties: {
           date: 'May 29th',
-          day: 12,
+          day: 13,
           fullTitle: 'Portland, OR',
           id: 15,
           miles: 174,
@@ -457,7 +463,7 @@ const initialState = {
         type,
         properties: {
           date: 'May 31th',
-          day: 13,
+          day: 14,
           fullTitle: 'San Francisco, CA',
           id: 16,
           miles: 636,
@@ -477,7 +483,7 @@ const initialState = {
         type,
         properties: {
           date: 'June 1st',
-          day: 14,
+          day: 15,
           fullTitle: 'Los Angeles, CA',
           id: 17,
           miles: 383,
@@ -497,7 +503,7 @@ const initialState = {
         type,
         properties: {
           date: 'June 2nd',
-          day: 15,
+          day: 16,
           fullTitle: 'Palm Springs, CA',
           id: 18,
           miles: 107,
