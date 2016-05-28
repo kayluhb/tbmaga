@@ -399,7 +399,7 @@ const initialState = {
         }
       },
       {
-        current: true,
+        past: true,
         type,
         properties: {
           date: 'May 25th',
@@ -412,7 +412,7 @@ const initialState = {
           prev: 12,
           slug: 'missoula',
           title: 'Missoula',
-          why: 'It\'s halfway between Seattle and Grand Tetons and our friend has a friend who\'s a baker here'
+          why: 'It\'s halfway between Seattle and the Tetons and our friend has a friend who\'s a baker here'
         },
         geometry: {
           type: geometryType,
@@ -420,7 +420,7 @@ const initialState = {
         }
       },
       {
-        upcoming: true,
+        current: true,
         type,
         properties: {
           date: 'May 26th',
@@ -429,6 +429,7 @@ const initialState = {
           id: 14,
           miles: 213,
           next: 15,
+          photos: 24,
           prev: 13,
           slug: 'spokane',
           title: 'Spokane',
