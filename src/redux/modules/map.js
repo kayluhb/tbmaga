@@ -427,6 +427,9 @@ const initialState = {
           day: 12,
           fullTitle: 'Spokane, WA',
           id: 14,
+          media: [
+            '<iframe width="711" height="400" src="https://www.youtube.com/embed/hxakzAhJuc0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>'
+          ],
           miles: 213,
           next: 15,
           photos: 24,
