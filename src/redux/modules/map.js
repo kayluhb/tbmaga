@@ -456,7 +456,7 @@ const initialState = {
         }
       },
       {
-        current: true,
+        past: true,
         type,
         properties: {
           date: 'May 27th',
@@ -483,7 +483,7 @@ const initialState = {
         }
       },
       {
-        upcoming: true,
+        current: true,
         type,
         properties: {
           date: 'May 28th',
@@ -492,10 +492,16 @@ const initialState = {
           id: 16,
           miles: 237,
           next: 17,
+          photos: 37,
           prev: 15,
           slug: 'olympic-national-park',
+          soundtrack: [
+            { title: 'Arcade Fire - Here Comes the Night Time', img: 'arcade-fire.jpg' },
+            { title: 'Disclosure - Elevation', img: 'disclosure.jpg' },
+            { title: 'Toto - Africa', img: 'toto.jpg' },
+          ],
           title: 'Olympic National Park',
-          why: ''
+          why: 'To make up for missing out on Yellowstone and because it has so many big trees, multiple climates, and it\'s close to Seattle'
         },
         geometry: {
           type: geometryType,
@@ -506,8 +512,8 @@ const initialState = {
         upcoming: true,
         type,
         properties: {
-          date: 'May 29th',
-          day: 13,
+          date: 'May 30th',
+          day: 16,
           fullTitle: 'Portland, OR',
           id: 17,
           miles: 174,
@@ -527,7 +533,7 @@ const initialState = {
         type,
         properties: {
           date: 'May 31th',
-          day: 14,
+          day: 17,
           fullTitle: 'San Francisco, CA',
           id: 18,
           miles: 636,
@@ -547,7 +553,7 @@ const initialState = {
         type,
         properties: {
           date: 'June 1st',
-          day: 15,
+          day: 18,
           fullTitle: 'Los Angeles, CA',
           id: 19,
           miles: 383,
@@ -567,7 +573,7 @@ const initialState = {
         type,
         properties: {
           date: 'June 2nd',
-          day: 16,
+          day: 19,
           fullTitle: 'Palm Springs, CA',
           id: 20,
           miles: 107,
@@ -587,7 +593,7 @@ const initialState = {
         type,
         properties: {
           date: 'June 4th',
-          day: 19,
+          day: 20,
           fullTitle: 'Grand Canyon, AZ',
           id: 21,
           miles: 552,
@@ -607,7 +613,7 @@ const initialState = {
         type,
         properties: {
           date: 'June 6th',
-          day: 17,
+          day: 21,
           fullTitle: 'Antelope Canyon, AZ',
           id: 22,
           miles: 708,
@@ -627,7 +633,7 @@ const initialState = {
         type,
         properties: {
           date: 'June 7th',
-          day: 18,
+          day: 22,
           fullTitle: 'Albuquerque, TX',
           id: 23,
           miles: 186,
@@ -647,7 +653,7 @@ const initialState = {
         type,
         properties: {
           date: 'June 6th',
-          day: 17,
+          day: 23,
           fullTitle: 'Carlsbad, NM',
           id: 24,
           miles: 708,
@@ -667,7 +673,7 @@ const initialState = {
         type,
         properties: {
           date: 'June 7th',
-          day: 18,
+          day: 24,
           fullTitle: 'Marfa, TX',
           id: 25,
           miles: 186,
@@ -687,7 +693,7 @@ const initialState = {
         type,
         properties: {
           date: 'June 8th',
-          day: 18,
+          day: 25,
           fullTitle: 'Big Bend National Park, TX',
           id: 26,
           miles: 98,
@@ -707,7 +713,7 @@ const initialState = {
         type,
         properties: {
           date: 'June 15th',
-          day: 30,
+          day: 31,
           fullTitle: 'Austin, TX',
           id: 27,
           miles: 435,
