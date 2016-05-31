@@ -23,7 +23,7 @@ const initialState = {
           miles: 0,
           next: 2,
           photos: 10,
-          prev: 25,
+          prev: 27,
           slug: 'brooklyn',
           title: 'Brooklyn',
           why: 'After years of living here, Lillian and Caleb are moving to Austin, Texas to be closer to family, have their own washer and dryer, and get a dog.',
@@ -390,6 +390,12 @@ const initialState = {
           photos: 1,
           prev: 11,
           slug: 'yellowstone',
+          soundtrack: [
+            {
+              title: 'Johnny Cash - Jackson',
+              img: 'johnny.jpg'
+            }
+          ],
           title: 'Yellowstone',
           why: 'It\'s fucking Yellowstone man. Do you need a reason why?'
         },
@@ -420,7 +426,7 @@ const initialState = {
         }
       },
       {
-        current: true,
+        past: true,
         type,
         properties: {
           date: 'May 26th',
@@ -435,6 +441,12 @@ const initialState = {
           photos: 24,
           prev: 13,
           slug: 'spokane',
+          soundtrack: [
+            {
+              title: 'Jimmie Dale Gilmore - Goodbye to Old Missoula',
+              img: 'jimmie-dale.jpg'
+            }
+          ],
           title: 'Spokane',
           why: 'A random state park we found'
         },
@@ -444,17 +456,24 @@ const initialState = {
         }
       },
       {
-        upcoming: true,
+        current: true,
         type,
         properties: {
           date: 'May 27th',
           day: 13,
           fullTitle: 'Seattle, WA',
           id: 15,
-          miles: 475,
+          miles: 273,
           next: 16,
+          photos: 22,
           prev: 14,
           slug: 'seattle',
+          soundtrack: [
+            { title: 'Nirvana - Where Did You Sleep Last Night', img: 'nirvana.jpg' },
+            { title: 'Pearl Jam - Better Man', img: 'pearl-jam.jpg' },
+            { title: 'Sunny Day Real Estate - Guitar and Video Games', img: 'sunny-day-real-estate.jpg' },
+            { title: 'Presidents of the United States - Dune Buggy', img: 'pusa.jpg' },
+          ],
           title: 'Seattle',
           why: 'Lillian used to live here and wants to share it with Caleb.'
         },
@@ -467,13 +486,33 @@ const initialState = {
         upcoming: true,
         type,
         properties: {
+          date: 'May 28th',
+          day: 14,
+          fullTitle: 'Olympic National Park, WA',
+          id: 16,
+          miles: 237,
+          next: 17,
+          prev: 15,
+          slug: 'olympic-national-park',
+          title: 'Olympic National Park',
+          why: ''
+        },
+        geometry: {
+          type: geometryType,
+          coordinates: [-123.6043524, 47.8021067]
+        }
+      },
+      {
+        upcoming: true,
+        type,
+        properties: {
           date: 'May 29th',
           day: 13,
           fullTitle: 'Portland, OR',
-          id: 16,
+          id: 17,
           miles: 174,
-          next: 17,
-          prev: 15,
+          next: 18,
+          prev: 16,
           slug: 'portland',
           title: 'Portland',
           why: 'The Austin of the PNW, Caleb\'s cousin lives here and they have great coffee and beer.'
@@ -490,10 +529,10 @@ const initialState = {
           date: 'May 31th',
           day: 14,
           fullTitle: 'San Francisco, CA',
-          id: 17,
+          id: 18,
           miles: 636,
-          next: 18,
-          prev: 16,
+          next: 19,
+          prev: 17,
           slug: 'san-francisco',
           title: 'San Francisco',
           why: 'This is one of Lillian and Caleb\'s favorite cities. Also, Tartine.'
@@ -510,10 +549,10 @@ const initialState = {
           date: 'June 1st',
           day: 15,
           fullTitle: 'Los Angeles, CA',
-          id: 18,
+          id: 19,
           miles: 383,
-          next: 19,
-          prev: 17,
+          next: 20,
+          prev: 18,
           slug: 'los-angeles',
           title: 'Los Angeles',
           why: 'Lillian\'s cousin and childhood friend lives here. And Caleb wants to see palm trees.'
@@ -530,10 +569,10 @@ const initialState = {
           date: 'June 2nd',
           day: 16,
           fullTitle: 'Palm Springs, CA',
-          id: 19,
+          id: 20,
           miles: 107,
-          next: 20,
-          prev: 18,
+          next: 21,
+          prev: 19,
           slug: 'palm-springs',
           title: 'Palm Springs',
           why: 'We\'ve never been and we hear it\'s FABULOUS.'
@@ -550,10 +589,10 @@ const initialState = {
           date: 'June 4th',
           day: 19,
           fullTitle: 'Grand Canyon, AZ',
-          id: 20,
+          id: 21,
           miles: 552,
-          next: 21,
-          prev: 19,
+          next: 22,
+          prev: 20,
           slug: 'grand-canyon',
           title: 'Grand Canyon',
           why: 'We want to feel small while the world feels big around us.'
@@ -570,10 +609,10 @@ const initialState = {
           date: 'June 6th',
           day: 17,
           fullTitle: 'Antelope Canyon, AZ',
-          id: 21,
+          id: 22,
           miles: 708,
-          next: 22,
-          prev: 20,
+          next: 23,
+          prev: 21,
           slug: 'antelope-canyon',
           title: 'Antelope Canyon',
           why: 'It looks amazing in photos but we want to see it with our own four eyes. '
@@ -590,10 +629,10 @@ const initialState = {
           date: 'June 7th',
           day: 18,
           fullTitle: 'Albuquerque, TX',
-          id: 22,
+          id: 23,
           miles: 186,
-          next: 23,
-          prev: 21,
+          next: 24,
+          prev: 22,
           slug: 'albuquerque',
           title: 'Albuquerque',
           why: 'Because we need a place to stop between Grand Canyon & Carlsbad.'
@@ -610,10 +649,10 @@ const initialState = {
           date: 'June 6th',
           day: 17,
           fullTitle: 'Carlsbad, NM',
-          id: 23,
+          id: 24,
           miles: 708,
-          next: 24,
-          prev: 22,
+          next: 25,
+          prev: 23,
           slug: 'carlsbad',
           title: 'Carlsbad',
           why: 'Caleb loves caves.'
@@ -630,10 +669,10 @@ const initialState = {
           date: 'June 7th',
           day: 18,
           fullTitle: 'Marfa, TX',
-          id: 24,
+          id: 25,
           miles: 186,
-          next: 25,
-          prev: 23,
+          next: 26,
+          prev: 24,
           slug: 'marfa',
           title: 'Marfa',
           why: 'There is too much cool here to not go. Also, Beyonce has been.'
@@ -650,10 +689,10 @@ const initialState = {
           date: 'June 8th',
           day: 18,
           fullTitle: 'Big Bend National Park, TX',
-          id: 25,
+          id: 26,
           miles: 98,
-          next: 26,
-          prev: 24,
+          next: 27,
+          prev: 25,
           slug: 'big-bend',
           title: 'Big Bend',
           why: 'Caleb needs to go to West Texas to be able to call himself a true Texan.'
@@ -670,10 +709,10 @@ const initialState = {
           date: 'June 15th',
           day: 30,
           fullTitle: 'Austin, TX',
-          id: 26,
+          id: 27,
           miles: 435,
           next: 1,
-          prev: 25,
+          prev: 26,
           slug: 'austin',
           title: 'Austin',
           why: '"There is a freedom you begin to feel the closer you get to Austin, Texas" - Willie'
