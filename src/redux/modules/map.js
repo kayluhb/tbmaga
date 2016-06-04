@@ -509,7 +509,7 @@ const initialState = {
         }
       },
       {
-        current: true,
+        past: true,
         type,
         properties: {
           date: 'May 30th',
@@ -521,6 +521,9 @@ const initialState = {
           photos: 15,
           prev: 16,
           slug: 'portland',
+          soundtrack: [
+            { title: 'The Decemberists - Here I Dreamt I was An Architect', img: 'decemberists.jpg' },
+          ],
           title: 'Portland',
           why: 'The Austin of the PNW, Caleb\'s cousin lives here and they have great coffee and beer.'
         },
@@ -530,7 +533,7 @@ const initialState = {
         }
       },
       {
-        upcoming: true,
+        current: true,
         type,
         properties: {
           date: 'June 1st',
@@ -539,8 +542,14 @@ const initialState = {
           id: 18,
           miles: 372,
           next: 19,
+          photos: 20,
           prev: 17,
           slug: 'redwood-state-park',
+          soundtrack: [
+            { title: 'Phantom Planet - California', img: 'phantom-planet.jpg' },
+            { title: 'Tupac & Dre - California Love', img: 'dre-tupac.jpg' },
+            { title: 'Billy Bragg and Wilco - California Stars', img: 'billy-bragg-wilco.jpg' },
+          ],
           title: 'Redwood State Park',
           why: 'Randomly found this park as a halfway '
         },
@@ -562,7 +571,7 @@ const initialState = {
           prev: 18,
           slug: 'napa-valley-state-park',
           title: 'Napa Valley',
-          why: ''
+          why: 'We decided to skip San Fran because we go there fairly frequently and do Napa since we have never been there.'
         },
         geometry: {
           type: geometryType,
