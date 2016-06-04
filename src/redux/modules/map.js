@@ -518,7 +518,7 @@ const initialState = {
           id: 17,
           miles: 262,
           next: 18,
-          photos: 15,
+          photos: 14,
           prev: 16,
           slug: 'portland',
           soundtrack: [
