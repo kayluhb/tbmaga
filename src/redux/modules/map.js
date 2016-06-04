@@ -23,7 +23,7 @@ const initialState = {
           miles: 0,
           next: 2,
           photos: 10,
-          prev: 28,
+          prev: 29,
           slug: 'brooklyn',
           title: 'Brooklyn',
           why: 'After years of living here, Lillian and Caleb are moving to Austin, Texas to be closer to family, have their own washer and dryer, and get a dog.',
@@ -523,6 +523,7 @@ const initialState = {
           slug: 'portland',
           soundtrack: [
             { title: 'The Decemberists - Here I Dreamt I was An Architect', img: 'decemberists.jpg' },
+            { title: 'Tame Impala — The Less I Know the Better', img: 'tame-impala.jpg' },
           ],
           title: 'Portland',
           why: 'The Austin of the PNW, Caleb\'s cousin lives here and they have great coffee and beer.'
@@ -533,7 +534,7 @@ const initialState = {
         }
       },
       {
-        current: true,
+        past: true,
         type,
         properties: {
           date: 'June 1st',
@@ -559,17 +560,21 @@ const initialState = {
         }
       },
       {
-        upcoming: true,
+        current: true,
         type,
         properties: {
           date: 'June 2nd',
-          day: 17,
+          day: 18,
           fullTitle: 'Napa Valley State Park, CA',
           id: 19,
           miles: 331,
           next: 20,
+          photos: 14,
           prev: 18,
           slug: 'napa-valley-state-park',
+          soundtrack: [
+            { title: 'Decemberists - California One/Youth and Beauty Brigade', img: 'decemberists.jpg' },
+          ],
           title: 'Napa Valley',
           why: 'We decided to skip San Fran because we go there fairly frequently and do Napa since we have never been there.'
         },
@@ -583,13 +588,17 @@ const initialState = {
         type,
         properties: {
           date: 'June 3rd',
-          day: 18,
+          day: 19,
           fullTitle: 'Los Angeles, CA',
           id: 20,
           miles: 383,
           next: 21,
           prev: 19,
           slug: 'los-angeles',
+          soundtrack: [
+            { title: 'The Beach Boys - Wouldn\'t It Be Nice', img: 'beach-boys.jpg' },
+            { title: 'The Beatles — Sun King', img: 'beatles.jpg' },
+          ],
           title: 'Los Angeles',
           why: 'Lillian\'s cousin and childhood friend lives here. And Caleb wants to see palm trees.'
         },
@@ -622,13 +631,33 @@ const initialState = {
         upcoming: true,
         type,
         properties: {
+          date: 'June 3rd',
+          day: 20,
+          fullTitle: 'Taliesin West, AZ',
+          id: 22,
+          miles: 295,
+          next: 23,
+          prev: 21,
+          slug: 'taliesin-west',
+          title: 'Taliesin West',
+          why: 'We really enjoyed Taliesin, so we added FLW\'s winter location.'
+        },
+        geometry: {
+          type: geometryType,
+          coordinates: [-111.844977, 33.606281]
+        }
+      },
+      {
+        upcoming: true,
+        type,
+        properties: {
           date: 'June 4th',
           day: 20,
           fullTitle: 'Grand Canyon, AZ',
-          id: 22,
-          miles: 552,
-          next: 23,
-          prev: 21,
+          id: 23,
+          miles: 230,
+          next: 24,
+          prev: 22,
           slug: 'grand-canyon',
           title: 'Grand Canyon',
           why: 'We want to feel small while the world feels big around us.'
@@ -645,10 +674,10 @@ const initialState = {
           date: 'June 6th',
           day: 21,
           fullTitle: 'Antelope Canyon, AZ',
-          id: 23,
+          id: 24,
           miles: 708,
-          next: 24,
-          prev: 22,
+          next: 25,
+          prev: 23,
           slug: 'antelope-canyon',
           title: 'Antelope Canyon',
           why: 'It looks amazing in photos but we want to see it with our own four eyes. '
@@ -664,11 +693,11 @@ const initialState = {
         properties: {
           date: 'June 7th',
           day: 22,
-          fullTitle: 'Albuquerque, TX',
-          id: 24,
+          fullTitle: 'Albuquerque, NM',
+          id: 25,
           miles: 186,
-          next: 25,
-          prev: 23,
+          next: 26,
+          prev: 24,
           slug: 'albuquerque',
           title: 'Albuquerque',
           why: 'Because we need a place to stop between Grand Canyon & Carlsbad.'
@@ -685,10 +714,10 @@ const initialState = {
           date: 'June 6th',
           day: 23,
           fullTitle: 'Carlsbad, NM',
-          id: 25,
+          id: 26,
           miles: 708,
-          next: 26,
-          prev: 24,
+          next: 27,
+          prev: 25,
           slug: 'carlsbad',
           title: 'Carlsbad',
           why: 'Caleb loves caves.'
@@ -705,10 +734,10 @@ const initialState = {
           date: 'June 8th',
           day: 25,
           fullTitle: 'Big Bend National Park, TX',
-          id: 26,
-          miles: 98,
-          next: 27,
-          prev: 25,
+          id: 27,
+          miles: 250,
+          next: 28,
+          prev: 26,
           slug: 'big-bend',
           title: 'Big Bend',
           why: 'Caleb needs to go to West Texas to be able to call himself a true Texan.'
@@ -725,10 +754,10 @@ const initialState = {
           date: 'June 7th',
           day: 24,
           fullTitle: 'Marfa, TX',
-          id: 27,
-          miles: 186,
-          next: 28,
-          prev: 26,
+          id: 28,
+          miles: 98,
+          next: 29,
+          prev: 27,
           slug: 'marfa',
           title: 'Marfa',
           why: 'There is too much cool here to not go. Also, Beyonce has been.'
@@ -745,10 +774,10 @@ const initialState = {
           date: 'June 15th',
           day: 31,
           fullTitle: 'Austin, TX',
-          id: 28,
+          id: 29,
           miles: 435,
           next: 1,
-          prev: 27,
+          prev: 28,
           slug: 'austin',
           title: 'Austin',
           why: '"There is a freedom you begin to feel the closer you get to Austin, Texas" - Willie'
