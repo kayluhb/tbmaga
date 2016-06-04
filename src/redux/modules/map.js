@@ -23,7 +23,7 @@ const initialState = {
           miles: 0,
           next: 2,
           photos: 10,
-          prev: 27,
+          prev: 28,
           slug: 'brooklyn',
           title: 'Brooklyn',
           why: 'After years of living here, Lillian and Caleb are moving to Austin, Texas to be closer to family, have their own washer and dryer, and get a dog.',
@@ -483,7 +483,7 @@ const initialState = {
         }
       },
       {
-        current: true,
+        past: true,
         type,
         properties: {
           date: 'May 28th',
@@ -509,15 +509,16 @@ const initialState = {
         }
       },
       {
-        upcoming: true,
+        current: true,
         type,
         properties: {
           date: 'May 30th',
           day: 16,
           fullTitle: 'Portland, OR',
           id: 17,
-          miles: 174,
+          miles: 262,
           next: 18,
+          photos: 15,
           prev: 16,
           slug: 'portland',
           title: 'Portland',
@@ -532,33 +533,53 @@ const initialState = {
         upcoming: true,
         type,
         properties: {
-          date: 'May 31th',
+          date: 'June 1st',
           day: 17,
-          fullTitle: 'San Francisco, CA',
+          fullTitle: 'Redwood State Park, CA',
           id: 18,
-          miles: 636,
+          miles: 372,
           next: 19,
           prev: 17,
-          slug: 'san-francisco',
-          title: 'San Francisco',
-          why: 'This is one of Lillian and Caleb\'s favorite cities. Also, Tartine.'
+          slug: 'redwood-state-park',
+          title: 'Redwood State Park',
+          why: 'Randomly found this park as a halfway '
         },
         geometry: {
           type: geometryType,
-          coordinates: [-122.419416, 37.774929]
+          coordinates: [-124.0746675, 41.2131576]
         }
       },
       {
         upcoming: true,
         type,
         properties: {
-          date: 'June 1st',
-          day: 18,
-          fullTitle: 'Los Angeles, CA',
+          date: 'June 2nd',
+          day: 17,
+          fullTitle: 'Napa Valley State Park, CA',
           id: 19,
-          miles: 383,
+          miles: 331,
           next: 20,
           prev: 18,
+          slug: 'napa-valley-state-park',
+          title: 'Napa Valley',
+          why: ''
+        },
+        geometry: {
+          type: geometryType,
+          coordinates: [-122.522049, 38.5516923]
+        }
+      },
+      {
+        upcoming: true,
+        type,
+        properties: {
+          date: 'June 3rd',
+          day: 18,
+          fullTitle: 'Los Angeles, CA',
+          id: 20,
+          miles: 383,
+          next: 21,
+          prev: 19,
           slug: 'los-angeles',
           title: 'Los Angeles',
           why: 'Lillian\'s cousin and childhood friend lives here. And Caleb wants to see palm trees.'
@@ -575,10 +596,10 @@ const initialState = {
           date: 'June 2nd',
           day: 19,
           fullTitle: 'Palm Springs, CA',
-          id: 20,
+          id: 21,
           miles: 107,
-          next: 21,
-          prev: 19,
+          next: 22,
+          prev: 20,
           slug: 'palm-springs',
           title: 'Palm Springs',
           why: 'We\'ve never been and we hear it\'s FABULOUS.'
@@ -595,10 +616,10 @@ const initialState = {
           date: 'June 4th',
           day: 20,
           fullTitle: 'Grand Canyon, AZ',
-          id: 21,
+          id: 22,
           miles: 552,
-          next: 22,
-          prev: 20,
+          next: 23,
+          prev: 21,
           slug: 'grand-canyon',
           title: 'Grand Canyon',
           why: 'We want to feel small while the world feels big around us.'
@@ -615,10 +636,10 @@ const initialState = {
           date: 'June 6th',
           day: 21,
           fullTitle: 'Antelope Canyon, AZ',
-          id: 22,
+          id: 23,
           miles: 708,
-          next: 23,
-          prev: 21,
+          next: 24,
+          prev: 22,
           slug: 'antelope-canyon',
           title: 'Antelope Canyon',
           why: 'It looks amazing in photos but we want to see it with our own four eyes. '
@@ -635,10 +656,10 @@ const initialState = {
           date: 'June 7th',
           day: 22,
           fullTitle: 'Albuquerque, TX',
-          id: 23,
+          id: 24,
           miles: 186,
-          next: 24,
-          prev: 22,
+          next: 25,
+          prev: 23,
           slug: 'albuquerque',
           title: 'Albuquerque',
           why: 'Because we need a place to stop between Grand Canyon & Carlsbad.'
@@ -655,10 +676,10 @@ const initialState = {
           date: 'June 6th',
           day: 23,
           fullTitle: 'Carlsbad, NM',
-          id: 24,
+          id: 25,
           miles: 708,
-          next: 25,
-          prev: 23,
+          next: 26,
+          prev: 24,
           slug: 'carlsbad',
           title: 'Carlsbad',
           why: 'Caleb loves caves.'
@@ -666,26 +687,6 @@ const initialState = {
         geometry: {
           type: geometryType,
           coordinates: [-104.556714, 32.147855]
-        }
-      },
-      {
-        upcoming: true,
-        type,
-        properties: {
-          date: 'June 7th',
-          day: 24,
-          fullTitle: 'Marfa, TX',
-          id: 25,
-          miles: 186,
-          next: 26,
-          prev: 24,
-          slug: 'marfa',
-          title: 'Marfa',
-          why: 'There is too much cool here to not go. Also, Beyonce has been.'
-        },
-        geometry: {
-          type: geometryType,
-          coordinates: [-104.020623, 30.309462]
         }
       },
       {
@@ -709,16 +710,36 @@ const initialState = {
         }
       },
       {
+        upcoming: true,
+        type,
+        properties: {
+          date: 'June 7th',
+          day: 24,
+          fullTitle: 'Marfa, TX',
+          id: 27,
+          miles: 186,
+          next: 28,
+          prev: 26,
+          slug: 'marfa',
+          title: 'Marfa',
+          why: 'There is too much cool here to not go. Also, Beyonce has been.'
+        },
+        geometry: {
+          type: geometryType,
+          coordinates: [-104.020623, 30.309462]
+        }
+      },
+      {
         atx: true,
         type,
         properties: {
           date: 'June 15th',
           day: 31,
           fullTitle: 'Austin, TX',
-          id: 27,
+          id: 28,
           miles: 435,
           next: 1,
-          prev: 26,
+          prev: 27,
           slug: 'austin',
           title: 'Austin',
           why: '"There is a freedom you begin to feel the closer you get to Austin, Texas" - Willie'
