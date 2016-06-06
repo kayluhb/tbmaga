@@ -560,7 +560,7 @@ const initialState = {
         }
       },
       {
-        current: true,
+        past: true,
         type,
         properties: {
           date: 'June 2nd',
@@ -584,7 +584,7 @@ const initialState = {
         }
       },
       {
-        upcoming: true,
+        current: true,
         type,
         properties: {
           date: 'June 3rd',
@@ -593,6 +593,7 @@ const initialState = {
           id: 20,
           miles: 383,
           next: 21,
+          photos: 14,
           prev: 19,
           slug: 'los-angeles',
           soundtrack: [
