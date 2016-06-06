@@ -584,14 +584,14 @@ const initialState = {
         }
       },
       {
-        current: true,
+        past: true,
         type,
         properties: {
           date: 'June 3rd',
           day: 19,
           fullTitle: 'Los Angeles, CA',
           id: 20,
-          miles: 383,
+          miles: 457,
           next: 21,
           photos: 14,
           prev: 19,
@@ -609,17 +609,22 @@ const initialState = {
         }
       },
       {
-        upcoming: true,
+        current: true,
         type,
         properties: {
-          date: 'June 2nd',
-          day: 19,
+          date: 'June 5th',
+          day: 21,
           fullTitle: 'Palm Springs, CA',
           id: 21,
           miles: 107,
           next: 22,
+          photos: 8,
           prev: 20,
           slug: 'palm-springs',
+          soundtrack: [
+            { title: 'Guy Clark - L.A. Freeway', img: 'guy-clark.jpg' },
+            { title: 'Beck — Where It\'s At', img: 'beatles.jpg' },
+          ],
           title: 'Palm Springs',
           why: 'We\'ve never been and we hear it\'s FABULOUS.'
         },
@@ -632,8 +637,8 @@ const initialState = {
         upcoming: true,
         type,
         properties: {
-          date: 'June 3rd',
-          day: 20,
+          date: 'June 6th',
+          day: 22,
           fullTitle: 'Taliesin West, AZ',
           id: 22,
           miles: 295,
