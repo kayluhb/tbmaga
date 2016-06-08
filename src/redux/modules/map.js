@@ -609,7 +609,7 @@ const initialState = {
         }
       },
       {
-        current: true,
+        past: true,
         type,
         properties: {
           date: 'June 5th',
@@ -634,7 +634,7 @@ const initialState = {
         }
       },
       {
-        upcoming: true,
+        current: true,
         type,
         properties: {
           date: 'June 6th',
@@ -643,6 +643,7 @@ const initialState = {
           id: 22,
           miles: 295,
           next: 23,
+          photos: 30,
           prev: 21,
           slug: 'taliesin-west',
           title: 'Taliesin West',
@@ -657,8 +658,8 @@ const initialState = {
         upcoming: true,
         type,
         properties: {
-          date: 'June 4th',
-          day: 20,
+          date: 'June 7th',
+          day: 23,
           fullTitle: 'Grand Canyon, AZ',
           id: 23,
           miles: 230,
