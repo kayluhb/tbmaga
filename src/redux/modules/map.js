@@ -724,7 +724,7 @@ const initialState = {
           day: 24,
           fullTitle: 'Santa Fe, NM',
           id: 26,
-          miles: 134,
+          miles: 64,
           next: 27,
           prev: 25,
           slug: 'santa-fe',
