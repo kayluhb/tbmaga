@@ -676,7 +676,7 @@ const initialState = {
         }
       },
       {
-        current: true,
+        past: true,
         type,
         properties: {
           date: 'June 7th',
@@ -697,7 +697,7 @@ const initialState = {
         }
       },
       {
-        upcoming: true,
+        current: true,
         type,
         properties: {
           date: 'June 8th',
@@ -706,6 +706,7 @@ const initialState = {
           id: 25,
           miles: 134,
           next: 26,
+          photos: 7,
           prev: 24,
           slug: 'albuquerque',
           title: 'Albuquerque',
