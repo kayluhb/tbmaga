@@ -655,7 +655,7 @@ const initialState = {
         }
       },
       {
-        current: true,
+        past: true,
         type,
         properties: {
           date: 'June 7th',
@@ -676,15 +676,16 @@ const initialState = {
         }
       },
       {
-        upcoming: true,
+        current: true,
         type,
         properties: {
           date: 'June 7th',
           day: 23,
           fullTitle: 'Gallup, NM',
           id: 24,
-          miles: 255,
+          miles: 270,
           next: 25,
+          photos: 23,
           prev: 23,
           slug: 'gallup',
           title: 'Gallup',
@@ -692,7 +693,7 @@ const initialState = {
         },
         geometry: {
           type: geometryType,
-          coordinates: [-111.376594, 36.8618613]
+          coordinates: [-108.8635617, 35.5223329]
         }
       },
       {
@@ -700,10 +701,10 @@ const initialState = {
         type,
         properties: {
           date: 'June 8th',
-          day: 22,
+          day: 24,
           fullTitle: 'Albuquerque, NM',
           id: 25,
-          miles: 140,
+          miles: 134,
           next: 26,
           prev: 24,
           slug: 'albuquerque',
@@ -719,13 +720,33 @@ const initialState = {
         upcoming: true,
         type,
         properties: {
+          date: 'June 8th',
+          day: 24,
+          fullTitle: 'Santa Fe, NM',
+          id: 26,
+          miles: 134,
+          next: 27,
+          prev: 25,
+          slug: 'santa-fe',
+          title: 'Santa Fe',
+          why: 'Lill came here as a kid and we want to see if it\'s still as cool as she remembers'
+        },
+        geometry: {
+          type: geometryType,
+          coordinates: [-106.1231207, 35.6824123]
+        }
+      },
+      {
+        upcoming: true,
+        type,
+        properties: {
           date: 'June 6th',
           day: 23,
           fullTitle: 'Carlsbad, NM',
-          id: 26,
+          id: 27,
           miles: 708,
-          next: 27,
-          prev: 25,
+          next: 28,
+          prev: 26,
           slug: 'carlsbad',
           title: 'Carlsbad',
           why: 'Caleb loves caves.'
@@ -742,10 +763,10 @@ const initialState = {
           date: 'June 8th',
           day: 25,
           fullTitle: 'Big Bend National Park, TX',
-          id: 27,
+          id: 28,
           miles: 250,
-          next: 28,
-          prev: 26,
+          next: 29,
+          prev: 27,
           slug: 'big-bend',
           title: 'Big Bend',
           why: 'Caleb needs to go to West Texas to be able to call himself a true Texan.'
@@ -762,10 +783,10 @@ const initialState = {
           date: 'June 7th',
           day: 24,
           fullTitle: 'Marfa, TX',
-          id: 28,
+          id: 29,
           miles: 98,
-          next: 29,
-          prev: 27,
+          next: 30,
+          prev: 28,
           slug: 'marfa',
           title: 'Marfa',
           why: 'There is too much cool here to not go. Also, Beyonce has been.'
@@ -782,10 +803,10 @@ const initialState = {
           date: 'June 15th',
           day: 31,
           fullTitle: 'Austin, TX',
-          id: 29,
+          id: 30,
           miles: 435,
           next: 1,
-          prev: 28,
+          prev: 29,
           slug: 'austin',
           title: 'Austin',
           why: '"There is a freedom you begin to feel the closer you get to Austin, Texas" - Willie'
