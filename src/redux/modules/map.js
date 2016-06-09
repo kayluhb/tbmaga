@@ -634,7 +634,7 @@ const initialState = {
         }
       },
       {
-        current: true,
+        past: true,
         type,
         properties: {
           date: 'June 6th',
@@ -655,7 +655,7 @@ const initialState = {
         }
       },
       {
-        upcoming: true,
+        current: true,
         type,
         properties: {
           date: 'June 7th',
@@ -664,6 +664,7 @@ const initialState = {
           id: 23,
           miles: 259,
           next: 24,
+          photos: 11,
           prev: 22,
           slug: 'grand-canyon',
           title: 'Grand Canyon',
@@ -678,16 +679,16 @@ const initialState = {
         upcoming: true,
         type,
         properties: {
-          date: 'June 6th',
-          day: 21,
-          fullTitle: 'Antelope Canyon, AZ',
+          date: 'June 7th',
+          day: 23,
+          fullTitle: 'Gallup, NM',
           id: 24,
-          miles: 100,
+          miles: 255,
           next: 25,
           prev: 23,
-          slug: 'antelope-canyon',
-          title: 'Antelope Canyon',
-          why: 'It looks amazing in photos but we want to see it with our own four eyes. '
+          slug: 'gallup',
+          title: 'Gallup',
+          why: 'We saw billboards on the road and it turns out this is Lill\'s happy place.'
         },
         geometry: {
           type: geometryType,
@@ -698,11 +699,11 @@ const initialState = {
         upcoming: true,
         type,
         properties: {
-          date: 'June 7th',
+          date: 'June 8th',
           day: 22,
           fullTitle: 'Albuquerque, NM',
           id: 25,
-          miles: 186,
+          miles: 140,
           next: 26,
           prev: 24,
           slug: 'albuquerque',
