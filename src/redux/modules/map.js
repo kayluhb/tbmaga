@@ -745,7 +745,7 @@ const initialState = {
           day: 23,
           fullTitle: 'Carlsbad, NM',
           id: 27,
-          miles: 708,
+          miles: 273,
           next: 28,
           prev: 26,
           slug: 'carlsbad',
