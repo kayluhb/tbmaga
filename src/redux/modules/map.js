@@ -697,7 +697,7 @@ const initialState = {
         }
       },
       {
-        current: true,
+        past: true,
         type,
         properties: {
           date: 'June 8th',
@@ -718,7 +718,7 @@ const initialState = {
         }
       },
       {
-        upcoming: true,
+        current: true,
         type,
         properties: {
           date: 'June 8th',
