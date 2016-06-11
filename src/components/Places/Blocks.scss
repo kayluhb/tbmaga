@@ -116,12 +116,8 @@
       li {
         display: inline-block;
         margin-bottom: 10px;
-        margin-left: 20px;
+        margin-left: 10px;
         width: 132px;
-
-        &:nth-child(3n + 1) {
-          margin-left: 0;
-        }
       }
 
       img {
@@ -188,8 +184,7 @@
     &--photos {
       &__list {
         li {
-          margin-left: 10px;
-          width: 86px;
+          width: 83px;
         }
       }
     }

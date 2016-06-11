@@ -743,10 +743,10 @@ const initialState = {
         type,
         properties: {
           date: 'June 10th',
-          day: 23,
+          day: 25,
           fullTitle: 'White Sands National Park, NM',
           id: 27,
-          miles: 273,
+          miles: 233,
           next: 28,
           prev: 26,
           slug: 'white-sands',
@@ -755,18 +755,18 @@ const initialState = {
         },
         geometry: {
           type: geometryType,
-          coordinates: [-104.556714, 32.147855]
+          coordinates: [-106.3256816, 32.7872403]
         }
       },
       {
         upcoming: true,
         type,
         properties: {
-          date: 'June 10th',
-          day: 23,
+          date: 'June 11th',
+          day: 26,
           fullTitle: 'Carlsbad, NM',
           id: 28,
-          miles: 273,
+          miles: 182,
           next: 29,
           prev: 27,
           slug: 'carlsbad',
