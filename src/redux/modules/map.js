@@ -783,7 +783,7 @@ const initialState = {
         upcoming: true,
         type,
         properties: {
-          date: 'June 8th',
+          date: 'June 12th',
           day: 25,
           fullTitle: 'Big Bend National Park, TX',
           id: 29,
@@ -803,7 +803,7 @@ const initialState = {
         upcoming: true,
         type,
         properties: {
-          date: 'June 7th',
+          date: 'June 13th',
           day: 24,
           fullTitle: 'Marfa, TX',
           id: 30,
