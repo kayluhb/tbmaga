@@ -739,7 +739,7 @@ const initialState = {
         }
       },
       {
-        current: true,
+        past: true,
         type,
         properties: {
           date: 'June 10th',
@@ -760,7 +760,7 @@ const initialState = {
         }
       },
       {
-        upcoming: true,
+        current: true,
         type,
         properties: {
           date: 'June 11th',
@@ -769,6 +769,7 @@ const initialState = {
           id: 28,
           miles: 182,
           next: 29,
+          photos: 19,
           prev: 27,
           slug: 'carlsbad',
           title: 'Carlsbad',
