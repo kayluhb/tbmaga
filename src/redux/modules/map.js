@@ -718,7 +718,7 @@ const initialState = {
         }
       },
       {
-        current: true,
+        past: true,
         type,
         properties: {
           date: 'June 8th',
@@ -739,15 +739,16 @@ const initialState = {
         }
       },
       {
-        upcoming: true,
+        current: true,
         type,
         properties: {
           date: 'June 10th',
           day: 25,
-          fullTitle: 'White Sands National Park, NM',
+          fullTitle: 'White Sands National Monument, NM',
           id: 27,
           miles: 233,
           next: 28,
+          photos: 18,
           prev: 26,
           slug: 'white-sands',
           title: 'White Sands',
@@ -786,7 +787,7 @@ const initialState = {
           day: 25,
           fullTitle: 'Big Bend National Park, TX',
           id: 29,
-          miles: 250,
+          miles: 361,
           next: 30,
           prev: 28,
           slug: 'big-bend',
