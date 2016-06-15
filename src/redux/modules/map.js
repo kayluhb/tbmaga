@@ -760,7 +760,7 @@ const initialState = {
         }
       },
       {
-        current: true,
+        past: true,
         type,
         properties: {
           date: 'June 11th',
@@ -781,7 +781,7 @@ const initialState = {
         }
       },
       {
-        upcoming: true,
+        current: true,
         type,
         properties: {
           date: 'June 12th',
@@ -790,6 +790,7 @@ const initialState = {
           id: 29,
           miles: 361,
           next: 30,
+          photos: 27,
           prev: 28,
           slug: 'big-bend',
           title: 'Big Bend',
