@@ -793,6 +793,24 @@ const initialState = {
           photos: 27,
           prev: 28,
           slug: 'big-bend',
+          soundtrack: [
+            {
+              title: 'Robert Earl Kean - Armadillo Highway',
+              img: 'robert-earl-keen.jpg'
+            },
+            {
+              title: 'Lyle Lovett - That\'s Right (You\'re Not From Texas)',
+              img: 'lyle-lovett.jpg'
+            },
+            {
+              title: 'Joe Ely - West Texas Waltz',
+              img: 'joe-ely.jpg'
+            },
+            {
+              title: 'Willie Nelson - Always on My Mind',
+              img: 'willie-nelson.jpg'
+            }
+          ],
           title: 'Big Bend',
           why: 'Caleb needs to go to West Texas to be able to call himself a true Texan.'
         },
