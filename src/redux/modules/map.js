@@ -785,7 +785,7 @@ const initialState = {
         type,
         properties: {
           date: 'June 12th',
-          day: 25,
+          day: 27,
           fullTitle: 'Big Bend National Park, TX',
           id: 29,
           miles: 361,
@@ -824,7 +824,7 @@ const initialState = {
         type,
         properties: {
           date: 'June 13th',
-          day: 24,
+          day: 29,
           fullTitle: 'Marfa, TX',
           id: 30,
           miles: 98,
