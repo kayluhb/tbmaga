@@ -781,7 +781,7 @@ const initialState = {
         }
       },
       {
-        current: true,
+        past: true,
         type,
         properties: {
           date: 'June 12th',
@@ -820,7 +820,7 @@ const initialState = {
         }
       },
       {
-        upcoming: true,
+        current: true,
         type,
         properties: {
           date: 'June 13th',
@@ -829,6 +829,7 @@ const initialState = {
           id: 30,
           miles: 98,
           next: 31,
+          photos: 26,
           prev: 29,
           slug: 'marfa',
           title: 'Marfa',
