@@ -827,7 +827,7 @@ const initialState = {
           day: 29,
           fullTitle: 'Marfa, TX',
           id: 30,
-          miles: 98,
+          miles: 431,
           next: 31,
           photos: 26,
           prev: 29,
@@ -845,7 +845,7 @@ const initialState = {
         type,
         properties: {
           date: 'June 15th',
-          day: 31,
+          day: 32,
           fullTitle: 'Austin, TX',
           id: 31,
           miles: 435,
