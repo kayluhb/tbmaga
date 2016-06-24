@@ -8,6 +8,8 @@ export default class Photos extends Component {
   }
 
   componentDidMount() {
+    this.initMasonry();
+
     if (typeof instgrm === 'undefined') {
       return;
     }
@@ -15,6 +17,21 @@ export default class Photos extends Component {
       instgrm.Embeds.process();
     }, 200);
   }
+
+  /* eslint-disable */
+  onImagesLoad(instance) {
+    // console.log('all images are loaded', instance);
+    new Masonry('.photos__list', {
+      itemSelector: '.photos__item'
+    });
+  }
+
+  initMasonry() {
+    const photos = document.querySelectorAll('.photos__list');
+    const imgLoad = imagesLoaded(photos);
+    imgLoad.on('always', this.onImagesLoad);
+  }
+  /* eslint-enable */
 
   imgs(place) {
     const { photos, media, slug, title } = place.properties;
@@ -50,7 +67,7 @@ export default class Photos extends Component {
     const { place } = this.props;
 
     return (
-      <div className="photos__list-wrap">
+      <div>
         {this.imgs(place)}
       </div>
     );
