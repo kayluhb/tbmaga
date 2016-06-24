@@ -161,7 +161,7 @@ export default class Map extends Component {
     };
     const current = {
       ...places,
-      features: features.filter(place => place.current === true)
+      features: features.filter(place => (place.current === true && place.atx === false))
     };
     const past = {
       ...places,
