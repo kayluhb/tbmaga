@@ -22,7 +22,6 @@ export default class Photos extends Component {
       instgrm.Embeds.process();
 
       if (this.msnry !== null) {
-        console.log(this.msnry);
         this.msnry.layout();
       }
     }, 200);
