@@ -14,17 +14,7 @@ export default class Photos extends Component {
 
   componentDidMount() {
     this.initMasonry();
-
-    if (typeof instgrm === 'undefined') {
-      return;
-    }
-    setTimeout(() => {
-      instgrm.Embeds.process();
-
-      if (this.msnry !== null) {
-        this.msnry.layout();
-      }
-    }, 200);
+    this.initInstagram();
   }
 
   /* eslint-disable */
@@ -41,10 +31,25 @@ export default class Photos extends Component {
     this.msnry.layout();
   }
 
+  initInstagram() {
+    if (typeof instgrm === 'undefined') {
+      return;
+    }
+    setTimeout(() => {
+      instgrm.Embeds.process();
+
+      if (this.msnry !== null) {
+        this.msnry.layout();
+      }
+    }, 200);
+  }
+
   initMasonry() {
-    const photos = document.querySelectorAll('.photos__list');
-    const imgLoad = imagesLoaded(photos);
-    imgLoad.on('always', this.onImagesLoad);
+    setTimeout(() => {
+      const photos = document.querySelectorAll('.photos__list');
+      const imgLoad = imagesLoaded(photos);
+      imgLoad.on('always', this.onImagesLoad);
+    }, 200);
   }
   /* eslint-enable */
 
