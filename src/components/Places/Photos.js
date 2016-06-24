@@ -30,7 +30,12 @@ export default class Photos extends Component {
   /* eslint-disable */
   onImagesLoad(instance) {
     // console.log('all images are loaded', instance);
-    this.msnry = new Masonry('.photos__list', {
+    const photos = document.querySelector('.photos__list');
+    if (photos === null) {
+      return;
+    }
+
+    this.msnry = new Masonry(photos, {
       itemSelector: '.photos__item'
     });
     this.msnry.layout();
