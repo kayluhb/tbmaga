@@ -54,6 +54,12 @@
     }
   }
 
+  &--media-open {
+    .nav {
+      z-index: -1;
+    }
+  }
+
   &--placed {
     .nav {
       left: 30px + $place-width;

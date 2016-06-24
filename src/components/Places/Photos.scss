@@ -5,6 +5,7 @@
   height: 100%;
   left: 0;
   overflow-y: scroll;
+  padding-bottom: 100px;
   position: fixed;
   top: 100%;
   transition: top $transition-timing-dramatic $transition-function-dramatic;
@@ -17,15 +18,35 @@
     padding: 0;
   }
 
-  &__item {
+  &__link {
     background: $col-white;
+    display: block;
+    padding: 4px;
+
+    &:hover {
+      background: $col-blue-dark;
+    }
+  }
+
+  &__item {
+    background: none;
     margin: 0;
     max-width: (100 / 3) * 1%;
-    padding: 4px;
+    padding: 0;
+
+    &:hover {
+      z-index: 10;
+    }
+
+    &__full {
+      max-width: 100%;
+    }
 
     &--media {
       align-items: center;
+      background: $col-white;
       display: flex;
+      padding: 4px;
     }
   }
 
@@ -46,7 +67,7 @@
     position: fixed;
     right: -100px;
     text-align: center;
-    top: 40px;
+    top: 30px;
     transition: right $transition-timing $transition-function;
     width: 42px;
     z-index: $z-close;
@@ -70,7 +91,7 @@
 
 .map--media-open {
   .photos {
-    top: 0;
+    top: 100px;
     transition-delay: .6s;
 
     &__close {
@@ -80,9 +101,18 @@
   }
 }
 
-// @media (max-width: $place-width * 2) {
-//   .photos {
-//     left: $body-width-min;
-//     width: calc(100% - #{$body-width-min});
-//   }
-// }
+@media (max-width: $break-laptop) {
+  .photos {
+    &__item {
+      max-width: 50%;
+    }
+  }
+}
+
+@media (max-width: $break-small) {
+  .photos {
+    &__item {
+      max-width: 100%;
+    }
+  }
+}

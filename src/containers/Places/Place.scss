@@ -42,11 +42,7 @@
     }
 
     &:hover {
-      border-color: $col-black;
-
-      .place-wrap__toggle__icon {
-        fill: $col-black;
-      }
+      background: $col-blue-dark;
     }
   }
 }

@@ -7,6 +7,11 @@ export default class Photos extends Component {
     place: PropTypes.object.isRequired
   }
 
+  constructor(props) {
+    super(props);
+    this.msnry = null;
+  }
+
   componentDidMount() {
     this.initMasonry();
 
@@ -15,15 +20,21 @@ export default class Photos extends Component {
     }
     setTimeout(() => {
       instgrm.Embeds.process();
+
+      if (this.msnry !== null) {
+        console.log(this.msnry);
+        this.msnry.layout();
+      }
     }, 200);
   }
 
   /* eslint-disable */
   onImagesLoad(instance) {
     // console.log('all images are loaded', instance);
-    new Masonry('.photos__list', {
+    this.msnry = new Masonry('.photos__list', {
       itemSelector: '.photos__item'
     });
+    this.msnry.layout();
   }
 
   initMasonry() {
@@ -56,7 +67,9 @@ export default class Photos extends Component {
         {mediaEmbeds}
         {Array(photos).fill().map((i, idx) =>
           <li className="photos__item" key={`img-${idx}`}>
-            <img className="photos__img" src={`/images/${slug}/${(idx + 1)}.jpg`} alt={title} />
+            <a className="photos__link" href={`/images/${slug}/${(idx + 1)}.jpg`} target="_blank">
+              <img className="photos__img" src={`/images/${slug}/${(idx + 1)}.jpg`} alt={title} />
+            </a>
           </li>
         )}
       </ul>
