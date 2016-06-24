@@ -50,7 +50,7 @@ export default class Place extends Component {
     const { mediaOpen, open, place } = this.props;
     const { current } = place;
     const { fullTitle, slug } = place.properties;
-    const blocks = place.upcoming || !place.current ? <PlaceUpcomingBlocks {...this.props} /> :
+    const blocks = place.upcoming || (place.atx && !place.current) ? <PlaceUpcomingBlocks {...this.props} /> :
       <PlaceBlocks {...this.props} />;
     const tip = open ? 'View map full screen' : 'View place information';
     const subtitle = current ? <h2 className="place__header__subtitle">Current place</h2> : null;
