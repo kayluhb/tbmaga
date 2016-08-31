@@ -45,8 +45,8 @@ export default function Html({ assets, component, store }) {
       <body>
         <div id="content" className="content" dangerouslySetInnerHTML={{ __html: content }} />
         <script dangerouslySetInnerHTML={{ __html: `window.initialState=${serialize(store.getState())};` }} />
-        <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js" />
-        <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js" />
+        <script src="https://unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.min.js" />
+        <script src="https://unpkg.com/masonry-layout@4.0/dist/masonry.pkgd.min.js" />
         <script src={assets.javascript.main} />
         <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
       </body>
